@@ -1,0 +1,97 @@
+footer{
+    .footer-bg{
+        text-decoration: none;
+        color: gray;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        padding: 15px 20px;
+        border-top: 1px solid rgba(gray, 0.2);
+        background: rgba(black, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 0 0 15px 15px;
+    }
+    .icon-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(gray, 0.5);
+        border-radius: 1000px;
+        cursor: pointer;
+        font-size: 16px;
+        height: 30px;
+        width: 30px;
+        margin: 0 5px;
+        text-decoration: none;
+        color: gray;
+        text-align: center;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+    }
+}
+
+
+
+
+// /* Circle */
+// .icon-button span {
+// 	border-radius: 0;
+// 	display: block;
+// 	height: 0;
+// 	left: 50%;
+// 	margin: 0;
+// 	position: absolute;
+// 	top: 50%;
+// 	-webkit-transition: all 0.3s;
+// 	   -moz-transition: all 0.3s;
+// 	     -o-transition: all 0.3s;
+// 	        transition: all 0.3s;
+// 	width: 0;
+// }
+// .icon-button:hover span {
+// 	width: 3.6rem;
+// 	height: 3.6rem;
+// 	border-radius: 3.6rem;
+// 	margin: -1.8rem;
+// }
+// .twitter span {
+// 	background-color: #4099ff;
+// }
+// .facebook span {
+// 	background-color: #3B5998;
+// }
+// .instagram span {
+// 	background-color: purple;
+// }
+
+// /* Icons */
+// .icon-button i {
+// 	background: none;
+// 	color: white;
+// 	height: 3.6rem;
+// 	left: 0;
+// 	line-height: 3.6rem;
+// 	position: absolute;
+// 	top: 0;
+// 	-webkit-transition: all 0.3s;
+// 	   -moz-transition: all 0.3s;
+// 	     -o-transition: all 0.3s;
+// 	        transition: all 0.3s;
+// 	width: 3.6rem;
+// 	z-index: 10;
+// }
+// .icon-button .icon-twitter {
+// 	color: #4099ff;
+// }
+// .icon-button .icon-facebook {
+// 	color: #3B5998;
+// }
+// .icon-button .icon-instagram {
+// 	color: purple;
+// }
+// .icon-button:hover .icon-twitter,
+// .icon-button:hover .icon-facebook,
+// .icon-button:hover .icon-instagram {
+// 	color: white;
+// }

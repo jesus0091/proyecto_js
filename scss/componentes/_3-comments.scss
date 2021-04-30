@@ -1,0 +1,58 @@
+.comments {
+    background: rgba(black, 0.8);
+        backdrop-filter: blur(10px);
+    padding: 50px;
+    border-top: 1px solid rgba(gray, 0.2);
+
+    h2{
+        font-family: 'Lato', sans-serif;
+        color: white;
+        letter-spacing: 1px;
+    }
+    .media {
+        padding: 8px;
+
+        .card-media {
+            display: flex;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: rgba(black, 0.6);
+            min-height: 200px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+
+            .media-img {
+
+                img {
+                    height: 80px;
+                    width: 80px;
+                    border-radius: 1000px;
+                }
+
+            }
+            .media-body {
+                color: white;
+
+                h5 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 15px;
+                    color: darkgray;
+                }
+            }
+            .quote-mark{
+                position: absolute;
+                color: darken(rgba(gray, 0.15), 30%);
+                font-size: 60px;
+                top: -9px;
+                right: 13px;
+            }
+
+        }
+
+
+    }
+}
