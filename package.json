@@ -7,5 +7,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesus0091/proyecto_js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jesus0091/proyecto_js/issues"
+  },
+  "homepage": "https://github.com/jesus0091/proyecto_js#readme",
   "description": ""
 }
