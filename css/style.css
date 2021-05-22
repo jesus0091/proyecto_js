@@ -577,31 +577,31 @@ footer .icon-button {
   animation: pang-animation 1.2s ease-out forwards;
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(1) {
-  transform: translate(-4px, 30%) rotate(40deg);
+  transform: translate(9px, 30%) rotate(40deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(2) {
-  transform: translate(10px, 30%) rotate(80deg);
+  transform: translate(-14px, 30%) rotate(80deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(3) {
-  transform: translate(15px, 30%) rotate(120deg);
+  transform: translate(-24px, 30%) rotate(120deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(4) {
   transform: translate(25px, 30%) rotate(160deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(5) {
-  transform: translate(-13px, 30%) rotate(200deg);
+  transform: translate(21px, 30%) rotate(200deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(6) {
-  transform: translate(-4px, 30%) rotate(240deg);
+  transform: translate(24px, 30%) rotate(240deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(7) {
-  transform: translate(-1px, 30%) rotate(280deg);
+  transform: translate(13px, 30%) rotate(280deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(8) {
-  transform: translate(11px, 30%) rotate(320deg);
+  transform: translate(20px, 30%) rotate(320deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(9) {
-  transform: translate(22px, 30%) rotate(360deg);
+  transform: translate(14px, 30%) rotate(360deg);
 }
 .wrapper input:checked ~ .btn {
   animation: plus-animation 0.5s ease-out forwards;
@@ -675,7 +675,7 @@ footer .icon-button {
 .border_color {
   display: flex;
   width: 130px;
-  background: linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+  background: #343434;
   height: 130px;
   justify-content: center;
   align-content: center;
@@ -706,12 +706,20 @@ footer .icon-button {
   font-size: 22px;
   letter-spacing: 1px;
 }
-.turn_collapse .card-body a {
+.turn_collapse .card-body p {
   text-decoration: none;
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   text-align: center;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+}
+
+input[type=radio]:checked + label .border_color {
+  background: linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
 }
 
 .form_style {
@@ -761,7 +769,7 @@ footer .icon-button {
   font-weight: 400;
   background: none;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
-  color: gray;
+  color: white;
   transition: all 0.15s ease;
   resize: none;
 }
@@ -771,10 +779,10 @@ footer .icon-button {
 }
 .form_style .inp input:focus {
   outline: none;
-  box-shadow: inset 0 -2px 0 gray;
+  box-shadow: inset 0 -2px 0 white;
 }
 .form_style .inp input:focus + .label {
-  color: gray;
+  color: white;
   transform: translate3d(0, -20px, 0) scale(0.75);
 }
 .form_style .inp input:focus + .focus-bg {

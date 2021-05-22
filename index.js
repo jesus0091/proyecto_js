@@ -1,75 +1,31 @@
-var cliente1 = {
-    nombre: prompt("Cliente 1: Ingrese su nombre:"),
-    apellido: prompt("Ingrese su apellido:"),
-    correo: prompt("Ingrese su correo electrónico:"),
-    telefono: prompt("Ingrese tu telefono:"),
-    pelo: prompt("Quiere corte de pelo?"),
-    barba: prompt("Quiere corte de barba?"),
-    servicio: function(){
-        var preciocorte = 500;
-        var preciobarba = 200;
-        if( (this.pelo.toUpperCase()).trim() == "SI" && (this.barba.toUpperCase()).trim() == "SI" ){
-            console.log("Debe pagar: " + (preciocorte + preciobarba));
-        }else{
-            console.log("Debe pagar: " + preciocorte);
-        }
-    }
-}
-var cliente2 = {
-    nombre: prompt("Cliente 2: Ingrese su nombre:"),
-    apellido: prompt("Ingrese su apellido:"),
-    correo: prompt("Ingrese su correo electrónico:"),
-    telefono: prompt("Ingrese tu telefono:"),
-    pelo: prompt("Quiere corte de pelo?"),
-    barba: prompt("Quiere corte de barba?"),
-    servicio: function(){
-        var preciocorte = 500;
-        var preciobarba = 200;
-        if( (this.pelo.toUpperCase()).trim() == "SI" && (this.barba.toUpperCase()).trim() == "SI" ){
-            console.log("Debe pagar: " + (preciocorte + preciobarba));
-        }else{
-            console.log("Debe pagar: " + preciocorte);
-        }
-    }
-}
-var cliente3 = {
-    nombre: prompt("Cliente 3: Ingrese su nombre:"),
-    apellido: prompt("Ingrese su apellido:"),
-    correo: prompt("Ingrese su correo electrónico:"),
-    telefono: prompt("Ingrese tu telefono:"),
-    pelo: prompt("Quiere corte de pelo?"),
-    barba: prompt("Quiere corte de barba?"),
-    servicio: function(){
-        var preciocorte = 500;
-        var preciobarba = 200;
-        if( (this.pelo.toUpperCase()).trim() == "SI" && (this.barba.toUpperCase()).trim() == "SI" ){
-            console.log("Debe pagar: " + (preciocorte + preciobarba));
-        }else{
-            console.log("Debe pagar: " + preciocorte);
-        }
-    }
-}
-var cliente4 = {
-    nombre: prompt("Cliente 4: Ingrese su nombre:"),
-    apellido: prompt("Ingrese su apellido:"),
-    correo: prompt("Ingrese su correo electrónico:"),
-    telefono: prompt("Ingrese tu telefono:"),
-    pelo: prompt("Quiere corte de pelo?"),
-    barba: prompt("Quiere corte de barba?"),
-    servicio: function(){
-        var preciocorte = 500;
-        var preciobarba = 200;
-        if( (this.pelo.toUpperCase()).trim() == "SI" && (this.barba.toUpperCase()).trim() == "SI" ){
-            console.log("Debe pagar: " + (preciocorte + preciobarba));
-        }else{
-            console.log("Debe pagar: " + preciocorte);
-        }
-    }
-}
-var clientes = [];
-clientes.push(cliente1, cliente2, cliente3, cliente4); 
+// const Clientes = [];
+// var NuevoCliente = ;
 
-for(i=0; i < clientes.length; i++){
-    clientes[i].servicio();
 
+// Funcion para recolectar los datos del cliente en el HTML
+const DatosCliente = () => {
+    // Selecciona el Barbero: Datos
+    let Barbero = '';
+    let Barbero1 = document.getElementById("Barbero1");
+    let Barbero2 = document.getElementById("Barbero2");
+    let Barbero3 = document.getElementById("Barbero3");
+
+    if (Barbero1.checked){
+        Barbero = Barbero1.value;
+    } else if (Barbero2.checked){
+        Barbero = Barbero2.value;
+    } else if (Barbero3.checked){
+        Barbero = Barbero3.value;
+    }
+    // Formulario: Datos
+    let NombreCliente = document.getElementById("name").value;
+    let TelefonoCliente = document.getElementById("telf").value;
+    let CorreoCliente = document.getElementById("email").value;
+
+    console.log(NombreCliente);
+
+    var NuevoCliente = new Cliente (NombreCliente, TelefonoCliente, CorreoCliente, Barbero);
+    console.log(NuevoCliente); 
+    guardarCliente(NuevoCliente);
 }
+

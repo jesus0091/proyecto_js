@@ -142,7 +142,41 @@
                     <div class="row">
                         <h3>Selecciona el barbero</h3>
                         <div class="col-12 d-flex justify-content-around">
-                            <a href="">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Barberos" id="Barbero1" value="Dani Castle"
+                                    checked>
+                                <label class="form-check-label" for="Barbero1">
+                                    <div class="border_color">
+                                        <img class="img_barber" src="imagenes/barberos-01.png" alt="">
+                                    </div>
+                                    <p>Dani Castle</p>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Barberos" id="Barbero2"
+                                    value="Erick Cortéz">
+                                <label class="form-check-label" for="Barbero2">
+                                    <div class="border_color">
+                                        <img class="img_barber" src="imagenes/barberos-02.png" alt="">
+                                    </div>
+                                    <p>Erick Cortéz</p>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Barberos" id="Barbero3"
+                                    value="Pablo Monty">
+                                <label class="form-check-label" for="Barbero3">
+                                    <div class="border_color">
+                                        <img class="img_barber" src="imagenes/barberos-03.png" alt="">
+                                    </div>
+                                    <p>Pablo Monty</p>
+                                </label>
+                            </div>
+
+
+
+
+                            <!-- <a href="">
                                 <div class="border_color">
                                     <img class="img_barber" src="imagenes/barberos-01.png" alt="">
                                 </div>
@@ -159,7 +193,7 @@
                                     <img class="img_barber" src="imagenes/barberos-03.png" alt="">
                                 </div>
                                 <p>Pablo Monty</p>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                     <div class="row pt-3 selection">
@@ -170,24 +204,24 @@
                             <h3>Ingresa tus datos</h3>
                             <form class="form_style" action="" id="form">
                                 <label for="name" class="inp">
-                                    <input type="text" id="name" placeholder="&nbsp;" name="nombre">
+                                    <input type="text" id="name" placeholder="&nbsp;" required>
                                     <span class="label">Nombre</span>
                                     <span class="focus-bg"></span>
                                 </label>
-                                <label for="email" class="inp">
-                                    <input type="email" id="email" placeholder="&nbsp;">
-                                    <span class="label">Correo electrónico</span>
+                                <label for="telf" class="inp">
+                                    <input type="text" id="telf" placeholder="&nbsp;" required>
+                                    <span class="label">Telefono</span>
                                     <span class="focus-bg"></span>
                                 </label>
                                 <label for="email" class="inp">
-                                    <input type="tel" id="tel" placeholder="&nbsp;">
-                                    <span class="label">Telefono</span>
+                                    <input type="email" id="email" placeholder="&nbsp;" required>
+                                    <span class="label">Correo electrónico</span>
                                     <span class="focus-bg"></span>
                                 </label>
                                 <div class="f_buttons d-flex justify-content-end align-items-center">
                                     <button class="btn btn_erase" type="reset"><i class="fas fa-backspace"></i></button>
-                                    <button class="btn btn_submit" type="submit"><span class="mr-2">Reservar</span><i
-                                            class="far fa-paper-plane"></i></button>
+                                    <button class="btn btn_submit" type="button" onclick="DatosCliente()"><span
+                                            class="mr-2">Reservar</span><i class="far fa-paper-plane"></i></button>
                                 </div>
                             </form>
                         </div>
@@ -289,6 +323,8 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
     </script>
     <!------------------------------------------------------------------------------------------------------>
+    <script src="Class/client.js"></script>
+    <script src="Functions/functions.js"></script>
     <script src="index.js"></script>
 </body>
 
