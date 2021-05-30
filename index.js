@@ -1,7 +1,3 @@
-// const Clientes = [];
-// var NuevoCliente = ;
-
-
 // Funcion para recolectar los datos del cliente en el HTML
 const DatosCliente = () => {
     // Selecciona el Barbero: Datos
@@ -17,6 +13,10 @@ const DatosCliente = () => {
     } else if (Barbero3.checked){
         Barbero = Barbero3.value;
     }
+
+    // Barbero = (Barbero1.checked)? Barbero1.value : (Barbero2.checked)? Barbero2.value : (Barbero3.checked)? Barbero3.value;
+    // Quise reemplazar el if y esto no me funcionó 
+
     // Formulario: Datos
     let NombreCliente = document.getElementById("name").value;
     let TelefonoCliente = document.getElementById("telf").value;

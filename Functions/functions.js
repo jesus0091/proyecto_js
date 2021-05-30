@@ -13,3 +13,9 @@ function guardarCliente(NuevoCliente) {
     var ClienteJSON = JSON.stringify(Clientes);
     localStorage.setItem("Clientes", ClienteJSON);
 }
+const Controlar = (event) => {
+    if (!(event.keyCode >= 48 && event.keyCode <= 57)) event.preventDefault();
+    console.log(event);
+}
+
+  
