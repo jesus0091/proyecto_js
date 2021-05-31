@@ -6,11 +6,11 @@ const DatosCliente = () => {
     let Barbero2 = document.getElementById("Barbero2");
     let Barbero3 = document.getElementById("Barbero3");
 
-    if (Barbero1.checked){
+    if (Barbero1.checked) {
         Barbero = Barbero1.value;
-    } else if (Barbero2.checked){
+    } else if (Barbero2.checked) {
         Barbero = Barbero2.value;
-    } else if (Barbero3.checked){
+    } else if (Barbero3.checked) {
         Barbero = Barbero3.value;
     }
 
@@ -24,8 +24,20 @@ const DatosCliente = () => {
 
     console.log(NombreCliente);
 
-    var NuevoCliente = new Cliente (NombreCliente, TelefonoCliente, CorreoCliente, Barbero);
-    console.log(NuevoCliente); 
+    const Modal = document.querySelector("#ModalReserva") //selecionas el modal
+    let elementodiv = document.createElement("div") // creamos un elemento div
+    // metemos adentro del div que creamos los datos del user
+    elementodiv.innerHTML = `
+        <ul>
+            <li>${NombreCliente}</li>
+            <li>${TelefonoCliente}</li>
+            <li>${CorreoCliente}</li>
+        </ul>
+    `;
+    Modal.appendChild(elementodiv) //  metemos adentro del modal el div que creamos
+
+
+    var NuevoCliente = new Cliente(NombreCliente, TelefonoCliente, CorreoCliente, Barbero);
+    console.log(NuevoCliente);
     guardarCliente(NuevoCliente);
 }
-
