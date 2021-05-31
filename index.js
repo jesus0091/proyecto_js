@@ -14,7 +14,7 @@ const DatosCliente = () => {
         Barbero = Barbero3.value;
     }
 
-    // Barbero = (Barbero1.checked)? Barbero1.value : (Barbero2.checked)? Barbero2.value : (Barbero3.checked)? Barbero3.value;
+    // let Barbero = (Barbero1.checked)? Barbero1.value : (Barbero2.checked)? Barbero2.value : (Barbero3.checked)? Barbero3.value;
     // Quise reemplazar el if y esto no me funcionó 
 
     // Formulario: Datos
