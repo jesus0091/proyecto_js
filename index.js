@@ -24,9 +24,10 @@ const DatosCliente = () => {
 
     console.log(NombreCliente);
 
-    const Modal = document.querySelector("#ModalReserva") //selecionas el modal
+    const Modal = document.querySelector("#DatosUser") //selecionas el modal
     let elementodiv = document.createElement("div") // creamos un elemento div
     // metemos adentro del div que creamos los datos del user
+    Modal.innerHTML = ``;
     elementodiv.innerHTML = `
         <ul>
             <li>${NombreCliente}</li>
