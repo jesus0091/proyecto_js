@@ -5,6 +5,9 @@
 
 .content-wrapper {
     padding: 50px 50px 15px 50px;
+    @media only screen and (max-width: 578px) {
+        padding: 20px 20px 15px 20px;
+    }
 
     .content-wrapper-context {
         display: flex;
@@ -28,6 +31,10 @@
                 #ffe652);
         border-radius: 15px;
         padding: 20px 40px;
+        @media only screen and (max-width: 578px) {
+            height: 240px;
+            
+        }
 
         .content-button {
             border: none;
@@ -262,7 +269,11 @@
 }
 
 
-
+.form-check{
+    @media only screen and (max-width: 578px) {
+        padding: 0;
+    }
+}
 
 
 
@@ -278,12 +289,21 @@
     border-radius: 1000px;
     vertical-align: middle;
     padding: 5px;
+    @media only screen and (max-width: 578px) {
+        height: 85px;
+        width: 85px;
+    }
 
     .img_barber {
         height: 120px;
         width: 120px;
         border-radius: 1000px;
         border: 5px solid black;
+        @media only screen and (max-width: 578px) {
+            height: 75px;
+            width: 75px;
+            border: 5px solid black;
+        }
     }
 }
 
@@ -291,6 +311,9 @@
     padding: 0 50px 40px 50px;
     background: rgba(black, 0.8);
     backdrop-filter: blur(10px);
+    @media only screen and (max-width: 578px) {
+        padding: 0 20px 20px 20px;
+    }
 
     .card-body {
         border-radius: 15px;
@@ -310,6 +333,9 @@
             font-family: 'Roboto', sans-serif;
             font-size: 16px;
             text-align: center;
+            @media only screen and (max-width: 578px) {
+                font-size: 13px;
+            }
         }
         
     }
@@ -465,4 +491,30 @@ input[type="radio"]:checked + label{
 
 .selection {
     border-top: 1px solid rgba(gray, 0.15);
+}
+
+.modal_style {
+    border-radius: 15px;
+    background-color: gray !important;
+    color: white;
+}
+.icon-modal {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(white, 0.7);
+    border-radius: 1000px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }

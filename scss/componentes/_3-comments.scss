@@ -4,6 +4,10 @@
     padding: 50px;
     border-top: 1px solid rgba(gray, 0.2);
 
+    @media only screen and (max-width: 578px) {
+        padding: 20px;
+    }
+
     h2{
         font-family: 'Lato', sans-serif;
         color: white;
@@ -21,6 +25,9 @@
             width: 100%;
             position: relative;
             overflow: hidden;
+            @media only screen and (max-width: 578px) {
+                min-height: 150px;
+            }
 
             .media-img {
 

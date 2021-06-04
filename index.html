@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <header class="mt-5">
+    <header class="mt-md-5">
         <nav class="container navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#">Barberia</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -175,10 +175,10 @@
                         </div>
                     </div>
                     <div class="row pt-3 selection">
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <h3>Selecciona la Fecha</h3>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <h3>Ingresa tus datos</h3>
                             <form class="form_style" action="" id="form">
                                 <label for="name" class="inp">
@@ -212,13 +212,13 @@
         </div>
     </section>
     <!------------------------------- Modal --------------------------------------->
-    <div class="modal fade" id="ModalReserva" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="col-12  modal fade" id="ModalReserva" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content modal_style">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Su reserva</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <button type="button" class="icon-modal" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
                     </button>
                 </div>
                 <div class="modal-body" id="DatosUser">
@@ -230,12 +230,11 @@
             </div>
         </div>
     </div>
-
     <section class="">
         <div class="container comments">
             <h2>Testimonios</h2>
             <div class="row">
-                <div class="col-3 media">
+                <div class="col-12 col-md-3 media">
                     <div class="card-media">
                         <div class="media-img">
                             <img src="imagenes/clientes-04.png" class="mr-3" alt="...">
@@ -247,7 +246,7 @@
                         <p class="quote-mark text-center"><i class="fas fa-quote-right"></i></p>
                     </div>
                 </div>
-                <div class="col-3  media">
+                <div class="col-12 col-md-3 media">
                     <div class="card-media">
                         <div class="media-img">
                             <img src="imagenes/clientes-05.png" class="mr-3" alt="...">
@@ -260,7 +259,7 @@
                         <p class="quote-mark text-center"><i class="fas fa-quote-right"></i></p>
                     </div>
                 </div>
-                <div class="col-3  media">
+                <div class="col-12 col-md-3  media">
                     <div class="card-media">
                         <div class="media-img">
                             <img src="imagenes/clientes-06.png" class="mr-3" alt="...">
@@ -272,7 +271,7 @@
                         <p class="quote-mark text-center"><i class="fas fa-quote-right"></i></p>
                     </div>
                 </div>
-                <div class="col-3  media">
+                <div class="col-12 col-md-3  media">
                     <div class="card-media">
                         <div class="media-img">
                             <img src="imagenes/clientes-07.png" class="mr-3" alt="...">
@@ -287,7 +286,7 @@
             </div>
         </div>
     </section>
-    <footer class="mb-5">
+    <footer class="mb-md-5">
         <div class="container footer-bg d-flex">
             <p class="m-0">
                 &copy;Copyright 2021: Jesús Hernández | Proyecto Javascript
