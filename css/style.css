@@ -602,31 +602,31 @@ footer .icon-button {
   animation: pang-animation 1.2s ease-out forwards;
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(1) {
-  transform: translate(-18px, 30%) rotate(40deg);
+  transform: translate(15px, 30%) rotate(40deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(2) {
-  transform: translate(13px, 30%) rotate(80deg);
+  transform: translate(-16px, 30%) rotate(80deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(3) {
-  transform: translate(-13px, 30%) rotate(120deg);
+  transform: translate(19px, 30%) rotate(120deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(4) {
-  transform: translate(-21px, 30%) rotate(160deg);
+  transform: translate(16px, 30%) rotate(160deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(5) {
-  transform: translate(-9px, 30%) rotate(200deg);
+  transform: translate(19px, 30%) rotate(200deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(6) {
-  transform: translate(17px, 30%) rotate(240deg);
+  transform: translate(19px, 30%) rotate(240deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(7) {
-  transform: translate(25px, 30%) rotate(280deg);
+  transform: translate(20px, 30%) rotate(280deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(8) {
-  transform: translate(3px, 30%) rotate(320deg);
+  transform: translate(-3px, 30%) rotate(320deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(9) {
-  transform: translate(15px, 30%) rotate(360deg);
+  transform: translate(5px, 30%) rotate(360deg);
 }
 .wrapper input:checked ~ .btn {
   animation: plus-animation 0.5s ease-out forwards;
@@ -889,8 +889,8 @@ input[type=radio]:checked + label .border_color {
 
 .modal_style {
   border-radius: 15px;
-  background-color: gray !important;
-  color: white;
+  background-color: white !important;
+  color: black;
 }
 
 .icon-modal {
@@ -914,6 +914,111 @@ input[type=radio]:checked + label .border_color {
   user-select: none;
 }
 
+html .calendar .card {
+  background: none !important;
+  overflow: hidden;
+}
+html .calendar .card-header {
+  border-radius: 15px;
+  background: #676767;
+  color: white;
+}
+html .calendar .card-header .prevMonth {
+  cursor: pointer;
+}
+html .calendar .card-header .nextMonth {
+  cursor: pointer;
+}
+html .calendar .card-body .days span {
+  background: gray;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  html .calendar .card-body .days span {
+    height: 27px;
+    width: 27px;
+    line-height: 27px;
+  }
+}
+html .calendar .card-body .days span:hover {
+  background: white;
+}
+html .calendar .card-body .dates span {
+  background: rgba(128, 128, 128, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  color: gray;
+  border-radius: 50%;
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  html .calendar .card-body .dates span {
+    height: 27px;
+    width: 27px;
+    line-height: 27px;
+  }
+}
+html .calendar .card-body .dates span.active {
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+html .calendar .card-body .dates span:hover {
+  background: gray;
+  color: black;
+}
+html .calendar .card-body .dates span.ntMonth {
+  color: gray;
+  background: none;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+html .calendar .card-body .dates span.ntMonth:hover {
+  background: white;
+  color: black;
+}
+html .calendar .card#event .card-header .close {
+  color: white;
+}
+html .calendar .card#event .card-body {
+  color: white;
+}
+@media (max-width: 768px) {
+  html .calendar .card#event .card-body {
+    background: gray;
+  }
+}
+html .calendar .card#event .card-body .events-today {
+  overflow-x: hidden;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  html body .pa-sm {
+    position: absolute;
+  }
+  html body .card_calendar-body .days span {
+    height: 15px;
+    width: 15px;
+    font-size: 0.8rem;
+  }
+  html body .card_calendar-body .dates span {
+    height: 15px;
+    width: 15px;
+    font-size: 0.8rem;
+  }
+  html body .card_calendar#event .card-body .events-today {
+    height: 188px;
+  }
+}
 :root {
   --theme-bg-color: rgba(16 18 27 / 40%);
   --border-color: rgba(113 119 144 / 25%);

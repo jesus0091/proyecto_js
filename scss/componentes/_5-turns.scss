@@ -363,13 +363,10 @@ input[type="radio"]:checked + label{
     }
 }
 
-
 .form_style {
     padding: 20px !important;
     border-radius: 15px;
     background-color: rgba(gray, 0.5);
-
-
 
     .inp {
         position: relative;
@@ -495,8 +492,8 @@ input[type="radio"]:checked + label{
 
 .modal_style {
     border-radius: 15px;
-    background-color: gray !important;
-    color: white;
+    background-color: white !important;
+    color: black;
 }
 .icon-modal {
     background-color: gray;

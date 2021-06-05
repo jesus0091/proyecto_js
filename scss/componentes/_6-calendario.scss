@@ -1,0 +1,156 @@
+$breakpoint-tablet: 768px;
+
+html {
+    .calendar {
+        .card {
+            background: none !important;
+            // border-radius: 15px;
+            overflow: hidden;
+
+            &-header {
+                border-radius: 15px;
+                background: darken(gray, 10%);
+                color: white;
+
+                .prevMonth {
+                    cursor: pointer;
+                }
+
+                .nextMonth {
+                    cursor: pointer;
+                }
+            }
+
+            &-body {
+                // background: #f1acb7;
+
+                .days {
+                    span {
+                        background: gray;
+                        color: #fff;
+                        border-radius: 50%;
+                        display: inline-block;
+                        height: 45px;
+                        width: 45px;
+                        line-height: 45px;
+                        cursor: pointer;
+
+                        @media (max-width: $breakpoint-tablet) {
+                            height: 27px;
+                            width: 27px;
+                            line-height: 27px;
+                        }
+
+                        &:hover {
+                            background: white;
+                        }
+                    }
+                }
+
+                .dates {
+                    span {
+                        background: rgba(gray, 0.1);
+                        border: 0.5px solid rgba(white, 0.1);
+                        color: gray;
+                        border-radius: 50%;
+                        display: inline-block;
+                        height: 45px;
+                        width: 45px;
+                        line-height: 45px;
+                        cursor: pointer;
+
+                        @media (max-width: $breakpoint-tablet) {
+                            height: 27px;
+                            width: 27px;
+                            line-height: 27px;
+                        }
+
+                        &.active {
+                            background: white;
+                            color: black;
+                            font-weight: bold;
+                        }
+
+                        &:hover {
+                            background: gray;
+                            color: black;
+                        }
+
+                        &.ntMonth {
+                            color: gray;
+                            background: none;
+                            border: 0.5px solid rgba(white, 0.1);
+
+                            &:hover {
+                                background: white;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#event {
+                .card-header {
+                    .close {
+                        color: white;
+                    }
+                }
+                .card-body {
+                    color: white;
+                    @media (max-width: $breakpoint-tablet) {
+                        background: gray;
+                    }
+
+                    .events-today {
+
+                        overflow-x: hidden;
+                        color: white;
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    html {
+        body {
+            .pa-sm {
+                position: absolute;
+            }
+
+            .card_calendar {
+                &-body {
+                    .days {
+                        span {
+                            height: 15px;
+                            width: 15px;
+                            // line-height: 38px;
+                            font-size: .8rem;
+                        }
+                    }
+
+                    .dates {
+                        span {
+                            height: 15px;
+                            width: 15px;
+                            // line-height: 38px;
+                            font-size: .8rem;
+                        }
+                    }
+                }
+
+                &#event {
+                    .card-body {
+                        .events-today {
+                            height: 188px;
+                        }
+                    }
+                }
+            }
+        }
+
+        ;
+    }
+}
