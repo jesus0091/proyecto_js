@@ -183,21 +183,32 @@
                         <div class="col-12">
                             <h3>Ingresa tus datos</h3>
                             <form class="form_style" action="" id="form">
-                                <label for="name" class="inp">
-                                    <input type="text" id="name" placeholder="&nbsp;" required>
+                                <!-- Nombre -->
+                                <label for="name" class="inp grupo_name position-relative" id="grupo_name">
+                                    <input class="formulario_input" type="text" name="name" id="name"
+                                        placeholder="&nbsp;" required>
                                     <span class="label">Nombre</span>
                                     <span class="focus-bg"></span>
+                                    <i class="formulario_validacion_estado fas fa-times-circle"></i>
+                                    <p class="formulario_input_error">Escribe un nombre válido</p>
                                 </label>
-                                <label for="telf" class="inp">
-                                    <input onkeypress="Controlar(event)" type="text" id="telf" placeholder="&nbsp;"
-                                        required>
+                                <!-- Telefono -->
+                                <label for="telf" class="inp grupo_telf position-relative" id="grupo_telf">
+                                    <input class="formulario_input" type="text" name="telf" id="telf"
+                                        placeholder="&nbsp;" required onkeypress="Controlar(event)">
                                     <span class="label">Telefono</span>
                                     <span class="focus-bg"></span>
+                                    <i class="formulario_validacion_estado fas fa-times-circle"></i>
+                                    <p class="formulario_input_error">Escribe un numero de teléfono válido</p>
                                 </label>
-                                <label for="email" class="inp">
-                                    <input type="email" id="email" placeholder="&nbsp;" required>
+                                <!-- Email -->
+                                <label for="email" class="inp grupo_email position-relative" id="grupo_email">
+                                    <input class="formulario_input" type="email" name="email" id="email"
+                                        placeholder="&nbsp;" required>
                                     <span class="label">Correo electrónico</span>
                                     <span class="focus-bg"></span>
+                                    <i class="formulario_validacion_estado fas fa-times-circle"></i>
+                                    <p class="formulario_input_error">Escribe un correo válido</p>
                                 </label>
                                 <div class="f_buttons d-flex justify-content-end align-items-center">
                                     <button class="btn btn_erase" type="reset"><i class="fas fa-backspace"></i></button>
@@ -214,7 +225,8 @@
         </div>
     </section>
     <!------------------------------- Modal --------------------------------------->
-    <div class="col-12  modal fade" id="ModalReserva" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="col-12  modal fade" id="ModalReserva" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content modal_style">
                 <div class="modal-header">
@@ -224,7 +236,7 @@
                     </button>
                 </div>
                 <div class="modal-body" id="DatosUser">
-                    
+
                 </div>
                 <div class="modal-footer">
                     <p>Gracias por elegirnos</p>
@@ -320,8 +332,8 @@
     <script src="App/calendar.js"></script>
     <script src="Class/client.js"></script>
     <script src="Functions/functions.js"></script>
+    <script src="Functions/validations.js"></script>
     <script src="index.js"></script>
 </body>
 
 </html>
- 

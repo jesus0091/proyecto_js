@@ -44,4 +44,6 @@ const DatosCliente = () => {
     var NuevoCliente = new Cliente(NombreCliente, TelefonoCliente, CorreoCliente, Barbero);
     console.log(NuevoCliente);
     guardarCliente(NuevoCliente);
+    
+    form.reset();
 }
