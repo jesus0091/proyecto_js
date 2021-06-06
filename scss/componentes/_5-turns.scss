@@ -6,7 +6,7 @@
 .content-wrapper {
     padding: 50px 50px 15px 50px;
     @media only screen and (max-width: 578px) {
-        padding: 20px 20px 15px 20px;
+        padding: 15px;
     }
 
     .content-wrapper-context {
@@ -289,9 +289,11 @@
     border-radius: 1000px;
     vertical-align: middle;
     padding: 5px;
+    cursor: pointer;
     @media only screen and (max-width: 578px) {
-        height: 85px;
-        width: 85px;
+        height: 79px;
+        width: 79px;
+        padding: 2px;
     }
 
     .img_barber {
@@ -312,7 +314,7 @@
     background: rgba(black, 0.8);
     backdrop-filter: blur(10px);
     @media only screen and (max-width: 578px) {
-        padding: 0 20px 20px 20px;
+        padding: 0 15px 15px 15px;
     }
 
     .card-body {
