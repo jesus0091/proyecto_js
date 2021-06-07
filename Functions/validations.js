@@ -14,7 +14,7 @@ const campos = {
 }
 
 const validarCampo = (expresion, input, campo) => {
-	if(expresion.test(input.value)>0){
+	if(expresion.test(input.value)){
 		document.getElementById(`grupo_${campo}`).classList.remove('formulario_grupo_incorrecto');
 		document.getElementById(`grupo_${campo}`).classList.add('formulario_grupo_correcto');
 		document.querySelector(`#grupo_${campo} i`).classList.remove('fa-times-circle');
@@ -47,7 +47,7 @@ const validarFormulario = (e) => {
 }
 
 inputs.forEach((input) => {
-	input.addEventListener('keydown', validarFormulario);
+	input.addEventListener('keyup', validarFormulario);
 	input.addEventListener('blur', validarFormulario);
 });
 
@@ -59,14 +59,14 @@ form.addEventListener('DatosCliente', (e) => {
 		form.reset();
         console.log("funca")
 
-		// document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-		// setTimeout(() => {
-		// 	document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-		// }, 5000);
+		document.getElementById('formulario_mensaje_exito').classList.add('formulario_mensaje_exito_activo');
+		setTimeout(() => {
+			document.getElementById('formulario__mensaje-exito').classList.remove('formulario_mensaje_exito_activo');
+		}, 5000);
 
-		// document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-		// 	icono.classList.remove('formulario__grupo-correcto');
-		// });
+		document.querySelectorAll('.formulario_grupo_correcto').forEach((icono) => {
+			icono.classList.remove('formulario_grupo_correcto');
+		});
 	} else {
         console.log("no funca")
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');

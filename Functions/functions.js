@@ -17,5 +17,11 @@ const Controlar = (event) => {
     if (!(event.keyCode >= 48 && event.keyCode <= 57)) event.preventDefault();
     console.log(event);
 }
-
+const borraricons = () => {
+    var borrar = document.querySelectorAll('#form i');
+    borrar.forEach(element => {
+        element.classList.remove('fa-check-circle');
+        element.classList.remove('fa-times-circle');
+    });
+ }
   

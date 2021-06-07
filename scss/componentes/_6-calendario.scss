@@ -9,8 +9,10 @@ html {
 
             &-header {
                 border-radius: 15px;
-                background: darken(gray, 10%);
+                background: darken(gray, 30%);
                 color: white;
+                letter-spacing: 0.5px;
+                margin-bottom: 10px;
 
                 .prevMonth {
                     cursor: pointer;
@@ -63,6 +65,7 @@ html {
                             height: 27px;
                             width: 27px;
                             line-height: 27px;
+                            border: none;
                         }
 
                         &.active {

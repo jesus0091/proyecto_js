@@ -13,11 +13,11 @@ const DatosCliente = () => {
         Barbero = Barbero3.value;
     }
     console.log(Barbero);
-    
+
     // Definir fecha
     let day = $('.event-day').html();
     let date = $('.event-date').html();
-    let Fecha = day+', '+date; 
+    let Fecha = day + ', ' + date;
     // Definir hora
 
     // Formulario: Datos
@@ -26,10 +26,22 @@ const DatosCliente = () => {
     let CorreoCliente = $("#email").val();
     console.log(NombreCliente);
 
-    const Modal = document.querySelector("#DatosUser");
-    let elementodiv = document.createElement("div");
-    Modal.innerHTML = ``;
-    elementodiv.innerHTML = `
+    
+
+
+    if ((NombreCliente === "" || TelefonoCliente === "" || CorreoCliente === "")) {
+        
+        $('#btnmodal').removeAttr('data-target');
+        // $('#btnmodal').prop('disabled', true);
+        
+    }else{
+        $('#btnmodal').attr('data-target', '#ModalReserva');
+        // $('#btnmodal').removeProp('disabled')
+        // document.querySelector('#btnmodal').remove.disabled;
+        const Modal = document.querySelector("#DatosUser");
+        let elementodiv = document.createElement("div");
+        Modal.innerHTML = ``;
+        elementodiv.innerHTML = `
         <ul>
             <li>${NombreCliente}</li>
             <li>${TelefonoCliente}</li>
@@ -37,13 +49,17 @@ const DatosCliente = () => {
             <li>${Fecha}</li>
             <li>${Barbero}</li>
         </ul>
-    `;
-    Modal.appendChild(elementodiv) //  metemos adentro del modal el div que creamos
+        `;
+        Modal.appendChild(elementodiv) //  metemos adentro del modal el div que creamos
 
 
-    var NuevoCliente = new Cliente(NombreCliente, TelefonoCliente, CorreoCliente, Barbero);
-    console.log(NuevoCliente);
-    guardarCliente(NuevoCliente);
-    
-    form.reset();
+        var NuevoCliente = new Cliente(NombreCliente, TelefonoCliente, CorreoCliente, Barbero);
+        console.log(NuevoCliente);
+        guardarCliente(NuevoCliente);
+
+        
+        form.reset();
+        borraricons();
+    }
+
 }
