@@ -4,6 +4,9 @@ body{
     background-size: cover;
     background-attachment: fixed;
     overflow: scroll;
+    @media only screen and (max-width: 578px) {
+        // background-image: none;
+    }
 }
 *{
     font-family: 'Roboto', sans-serif;

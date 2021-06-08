@@ -6,7 +6,7 @@
 .content-wrapper {
     padding: 50px 50px 15px 50px;
     @media only screen and (max-width: 578px) {
-        padding: 15px;
+        padding: 10px;
     }
 
     .content-wrapper-context {
@@ -314,7 +314,7 @@
     background: rgba(black, 0.8);
     backdrop-filter: blur(10px);
     @media only screen and (max-width: 578px) {
-        padding: 0 15px 15px 15px;
+        padding: 0 10px 10px 10px;
     }
 
     .card-body {
