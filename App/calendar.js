@@ -51,6 +51,17 @@ let year = c_date.getFullYear();
                                 <span class="event-day">Monday</span>
                             </div> 
                             <div class="events-today my-3 px-3">
+                                <table>
+                                    <tr>
+                                         <th><span>10:00</span></th>                                                                       
+                                    </tr>
+                                    <tr>
+                                        <th><span>10:30</span></th>                                                                       
+                                    </tr>
+                                    <tr>
+                                        <th><span>11:00</span></th>                                                                       
+                                    </tr>
+                                </table>            
                             </div>                
                         </div>
                     </div>                            
@@ -122,7 +133,7 @@ function renderCalendar(m, y) {
                 let cellText = document.createTextNode(date);
                 span.classList.add('showEvent');
                 if (date === c_date.getDate() && y === c_date.getFullYear() && m === c_date.getMonth()) {
-                    span.classList.add('bg-danger','text-white');
+                    span.classList.add('bg-danger', 'text-white');
                 }
                 cell.appendChild(span).appendChild(cellText);
                 row.appendChild(cell);

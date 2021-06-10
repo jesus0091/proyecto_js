@@ -420,6 +420,20 @@ header .navbar {
   right: 13px;
 }
 
+.Modal_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Modal_content img {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}
+.Modal_content h2 {
+  font-family: "Lato", sans-serif;
+}
+
 footer .footer-bg {
   text-decoration: none;
   color: gray;
@@ -601,31 +615,31 @@ footer .icon-button {
   animation: pang-animation 1.2s ease-out forwards;
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(1) {
-  transform: translate(-24px, 30%) rotate(40deg);
+  transform: translate(-5px, 30%) rotate(40deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(2) {
-  transform: translate(22px, 30%) rotate(80deg);
+  transform: translate(11px, 30%) rotate(80deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(3) {
-  transform: translate(25px, 30%) rotate(120deg);
+  transform: translate(17px, 30%) rotate(120deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(4) {
-  transform: translate(-6px, 30%) rotate(160deg);
+  transform: translate(23px, 30%) rotate(160deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(5) {
-  transform: translate(4px, 30%) rotate(200deg);
+  transform: translate(19px, 30%) rotate(200deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(6) {
-  transform: translate(13px, 30%) rotate(240deg);
+  transform: translate(17px, 30%) rotate(240deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(7) {
-  transform: translate(-10px, 30%) rotate(280deg);
+  transform: translate(1px, 30%) rotate(280deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(8) {
-  transform: translate(19px, 30%) rotate(320deg);
+  transform: translate(1px, 30%) rotate(320deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(9) {
-  transform: translate(-15px, 30%) rotate(360deg);
+  transform: translate(-7px, 30%) rotate(360deg);
 }
 .wrapper input:checked ~ .btn {
   animation: plus-animation 0.5s ease-out forwards;
@@ -731,7 +745,7 @@ footer .icon-button {
   .border_color .img_barber {
     height: 75px;
     width: 75px;
-    border: 5px solid black;
+    border: 3px solid black;
   }
 }
 
@@ -1080,7 +1094,7 @@ html .calendar .card-body .days span:hover {
 html .calendar .card-body .dates span {
   background: rgba(128, 128, 128, 0.1);
   border: 0.5px solid rgba(255, 255, 255, 0.1);
-  color: gray;
+  color: white;
   border-radius: 50%;
   display: inline-block;
   height: 45px;

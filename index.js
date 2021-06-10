@@ -26,40 +26,41 @@ const DatosCliente = () => {
     let CorreoCliente = $("#email").val();
     console.log(NombreCliente);
 
-    
+    const Modal = document.querySelector("#DatosUser");
+    let elementodiv = document.createElement("div");
+    Modal.innerHTML = ``;
+    elementodiv.innerHTML = `
+    <div class="Modal_content container">
+        <img class="ImagenModal" src="imagenes/comprobado.svg" alt="">
+        <h2 class="text-center">¡Hola, ${NombreCliente}!</h2>
+        <p class="">Tu turno se ha generado con éxito para el dia <span class="font-weight-bold">${Fecha}</span> a las con <span class="font-weight-bold">${Barbero}</span></p>
+        <p class="m-0">Cualquier cosa nos ponemos en contacto contigo a traves del:</p>
+        <p class="ml-1">Numero de Telefono: ${TelefonoCliente}</p>
+        <p class="ml-1">Correo: ${CorreoCliente}</p>   
+    </div>
+    `;
+    Modal.appendChild(elementodiv) //  metemos adentro del modal el div que creamos
 
 
-    if ((NombreCliente === "" || TelefonoCliente === "" || CorreoCliente === "")) {
+    var NuevoCliente = new Cliente(NombreCliente, TelefonoCliente, CorreoCliente, Barbero);
+    console.log(NuevoCliente);
+    guardarCliente(NuevoCliente);
+
+
+    form.reset();
+    borraricons();
+
+
+    // if ((NombreCliente === "" || TelefonoCliente === "" || CorreoCliente === "")) {
+
+    //     $('#btnmodal').removeAttr('data-target');
+    //     // $('#btnmodal').prop('disabled', true);
+
+    // } else {
+    //     $('#btnmodal').attr('data-target', '#ModalReserva');
+    //     // $('#btnmodal').removeProp('disabled')
+    //     // document.querySelector('#btnmodal').remove.disabled;
         
-        $('#btnmodal').removeAttr('data-target');
-        // $('#btnmodal').prop('disabled', true);
-        
-    }else{
-        $('#btnmodal').attr('data-target', '#ModalReserva');
-        // $('#btnmodal').removeProp('disabled')
-        // document.querySelector('#btnmodal').remove.disabled;
-        const Modal = document.querySelector("#DatosUser");
-        let elementodiv = document.createElement("div");
-        Modal.innerHTML = ``;
-        elementodiv.innerHTML = `
-        <ul>
-            <li>${NombreCliente}</li>
-            <li>${TelefonoCliente}</li>
-            <li>${CorreoCliente}</li>
-            <li>${Fecha}</li>
-            <li>${Barbero}</li>
-        </ul>
-        `;
-        Modal.appendChild(elementodiv) //  metemos adentro del modal el div que creamos
-
-
-        var NuevoCliente = new Cliente(NombreCliente, TelefonoCliente, CorreoCliente, Barbero);
-        console.log(NuevoCliente);
-        guardarCliente(NuevoCliente);
-
-        
-        form.reset();
-        borraricons();
-    }
+    // }
 
 }
