@@ -649,3 +649,6 @@ input[type="radio"]:checked + label{
 		width: 100%;
 	}
 }
+#form .inp label {
+    display: none !important;
+}

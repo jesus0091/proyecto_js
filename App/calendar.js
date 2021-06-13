@@ -1,4 +1,5 @@
 //Constantes globales para el calendario
+const hours = ['10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00',]
 const days = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
 const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 

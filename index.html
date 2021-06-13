@@ -185,8 +185,14 @@
                             <form class="form_style" action="" id="form">
                                 <!-- Nombre -->
                                 <label for="name" class="inp grupo_name position-relative" id="grupo_name">
-                                    <input class="formulario_input" type="text" name="name" id="name"
-                                        placeholder="&nbsp;" required>
+                                    <input 
+                                        class="formulario_input" 
+                                        type="text" 
+                                        name="name" 
+                                        id="name"
+                                        placeholder="&nbsp;"
+                                        onchange="validAll()"
+                                        required>
                                     <span class="label">Nombre</span>
                                     <span class="focus-bg"></span>
                                     <i class="formulario_validacion_estado fas fa-times-circle"></i>
@@ -194,8 +200,16 @@
                                 </label>
                                 <!-- Telefono -->
                                 <label for="telf" class="inp grupo_telf position-relative" id="grupo_telf">
-                                    <input class="formulario_input" type="text" name="telf" id="telf"
-                                        placeholder="&nbsp;" required onkeypress="Controlar(event)">
+                                    <input 
+                                        class="formulario_input" 
+                                        type="text" 
+                                        name="telf" 
+                                        id="telf"
+                                        placeholder="&nbsp;" 
+                                        onkeypress="control(event)"
+                                        onchange="validAll()"
+                                        required
+                                        >
                                     <span class="label">Telefono</span>
                                     <span class="focus-bg"></span>
                                     <i class="formulario_validacion_estado fas fa-times-circle"></i>
@@ -203,18 +217,28 @@
                                 </label>
                                 <!-- Email -->
                                 <label for="email" class="inp grupo_email position-relative" id="grupo_email">
-                                    <input class="formulario_input" type="email" name="email" id="email"
-                                        placeholder="&nbsp;" required>
+                                    <input 
+                                        class="formulario_input" 
+                                        type="email" 
+                                        name="email" 
+                                        id="email"
+                                        placeholder="&nbsp;" 
+                                        onchange="validAll()" 
+                                        required>
                                     <span class="label">Correo electrónico</span>
                                     <span class="focus-bg"></span>
                                     <i class="formulario_validacion_estado fas fa-times-circle"></i>
                                     <p class="formulario_input_error">Escribe un correo válido</p>
                                 </label>
                                 <div class="f_buttons d-flex justify-content-end align-items-center">
-                                    <button class="btn btn_erase" type="reset" onclick="borraricons()"><i class="fas fa-backspace"></i></button>
-                                    <button id="btnmodal" class="btn btn_submit" type="button" onclick="DatosCliente()"
-                                        data-toggle="modal" data-target="#ModalReserva" ><span
-                                            class="mr-2">Confirmar</span><i class="far fa-paper-plane"></i></button>
+                                    <button class="btn btn_erase" type="reset" onclick="eraseIcons()">
+                                        <i class="fas fa-backspace"></i>
+                                    </button>
+                                    <button id="btnmodal" class="btn btn_submit" type="button" 
+                                        data-toggle="modal" data-target="#ModalReserva" disabled="disabled" onclick="dataClient()">
+                                        <span class="mr-2">Confirmar</span>
+                                        <i class="far fa-paper-plane"></i>
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -235,7 +259,7 @@
                         <span aria-hidden="true"><i class="fas fa-times"></i></span>
                     </button>
                 </div>
-                <div class="modal-body" id="DatosUser">
+                <div class="modal-body" id="dataUser">
 
                 </div>
                 <div class="modal-footer">
@@ -317,9 +341,10 @@
     </footer>
     <!-------------------------------------- Componentes JS ------------------------------------------------->
     <!---- Jquery JS ---->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <!---- Popper JS ---->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">

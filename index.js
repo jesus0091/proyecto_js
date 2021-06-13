@@ -1,10 +1,10 @@
-// Funcion para recolectar los datos del cliente en el HTML
-const DatosCliente = () => {
-    // Definir barbero
+const dataClient = () => {
+    
     let Barbero = '';
     let Barbero1 = document.getElementById("Barbero1");
     let Barbero2 = document.getElementById("Barbero2");
     let Barbero3 = document.getElementById("Barbero3");
+    
     if (Barbero1.checked) {
         Barbero = Barbero1.value;
     } else if (Barbero2.checked) {
@@ -12,21 +12,16 @@ const DatosCliente = () => {
     } else if (Barbero3.checked) {
         Barbero = Barbero3.value;
     }
-    console.log(Barbero);
 
-    // Definir fecha
     let day = $('.event-day').html();
     let date = $('.event-date').html();
     let Fecha = day + ', ' + date;
-    // Definir hora
 
-    // Formulario: Datos
     let NombreCliente = $("#name").val();
     let TelefonoCliente = $("#telf").val();
     let CorreoCliente = $("#email").val();
-    console.log(NombreCliente);
 
-    const Modal = document.querySelector("#DatosUser");
+    const Modal = document.querySelector("#dataUser");
     let elementodiv = document.createElement("div");
     Modal.innerHTML = ``;
     elementodiv.innerHTML = `
@@ -34,33 +29,16 @@ const DatosCliente = () => {
         <img class="ImagenModal" src="imagenes/comprobado.svg" alt="">
         <h2 class="text-center">¡Hola, ${NombreCliente}!</h2>
         <p class="">Tu turno se ha generado con éxito para el dia <span class="font-weight-bold">${Fecha}</span> a las con <span class="font-weight-bold">${Barbero}</span></p>
-        <p class="m-0">Cualquier cosa nos ponemos en contacto contigo a traves del:</p>
-        <p class="ml-1">Numero de Telefono: ${TelefonoCliente}</p>
-        <p class="ml-1">Correo: ${CorreoCliente}</p>   
+        <p class="m-0">Cualquier cosa nos ponemos en contacto contigo a traves del <span class="font-weight-bold">${TelefonoCliente}</span> ó <span class="font-weight-bold">${CorreoCliente}</span></p>   
     </div>
     `;
-    Modal.appendChild(elementodiv) //  metemos adentro del modal el div que creamos
-
+    Modal.appendChild(elementodiv) 
 
     var NuevoCliente = new Cliente(NombreCliente, TelefonoCliente, CorreoCliente, Barbero);
     console.log(NuevoCliente);
-    guardarCliente(NuevoCliente);
-
+    saveClient(NuevoCliente);
 
     form.reset();
-    borraricons();
-
-
-    // if ((NombreCliente === "" || TelefonoCliente === "" || CorreoCliente === "")) {
-
-    //     $('#btnmodal').removeAttr('data-target');
-    //     // $('#btnmodal').prop('disabled', true);
-
-    // } else {
-    //     $('#btnmodal').attr('data-target', '#ModalReserva');
-    //     // $('#btnmodal').removeProp('disabled')
-    //     // document.querySelector('#btnmodal').remove.disabled;
-        
-    // }
+    eraseIcons();
 
 }

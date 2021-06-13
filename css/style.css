@@ -615,31 +615,31 @@ footer .icon-button {
   animation: pang-animation 1.2s ease-out forwards;
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(1) {
-  transform: translate(-5px, 30%) rotate(40deg);
+  transform: translate(23px, 30%) rotate(40deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(2) {
-  transform: translate(11px, 30%) rotate(80deg);
+  transform: translate(-4px, 30%) rotate(80deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(3) {
-  transform: translate(17px, 30%) rotate(120deg);
+  transform: translate(12px, 30%) rotate(120deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(4) {
-  transform: translate(23px, 30%) rotate(160deg);
+  transform: translate(-21px, 30%) rotate(160deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(5) {
-  transform: translate(19px, 30%) rotate(200deg);
+  transform: translate(6px, 30%) rotate(200deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(6) {
-  transform: translate(17px, 30%) rotate(240deg);
+  transform: translate(15px, 30%) rotate(240deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(7) {
-  transform: translate(1px, 30%) rotate(280deg);
+  transform: translate(-12px, 30%) rotate(280deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(8) {
-  transform: translate(1px, 30%) rotate(320deg);
+  transform: translate(9px, 30%) rotate(320deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(9) {
-  transform: translate(-7px, 30%) rotate(360deg);
+  transform: translate(-12px, 30%) rotate(360deg);
 }
 .wrapper input:checked ~ .btn {
   animation: plus-animation 0.5s ease-out forwards;
@@ -1054,6 +1054,10 @@ input[type=radio]:checked + label .border_color {
     width: 100%;
   }
 }
+#form .inp label {
+  display: none !important;
+}
+
 html .calendar .card {
   background: none !important;
   overflow: hidden;
