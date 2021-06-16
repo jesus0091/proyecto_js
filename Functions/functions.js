@@ -11,7 +11,7 @@ const saveClient = (NuevoCliente) => {
 const control = (event) => {
     if (!(event.keyCode >= 48 && event.keyCode <= 57))
         event.preventDefault();
-    console.log(event);
+    // console.log(event);
 }
 
 const eraseIcons = () => {
@@ -21,6 +21,7 @@ const eraseIcons = () => {
         element.classList.remove('fa-times-circle');
         element.classList.remove('formulario_input_error_activo');
     });
+    $('#btnmodal').attr("disabled", 'disabled')
 }
 
 const validField = (expresion, input, campo) => {
@@ -30,6 +31,7 @@ const validField = (expresion, input, campo) => {
         $(`#grupo_${campo} i`).removeClass('fa-times-circle');
         $(`#grupo_${campo} i`).addClass('fa-check-circle');
         $(`#grupo_${campo} .formulario_input_error`).removeClass('formulario_input_error_activo');
+        console.log(campos[campo])
         campos[campo] = true;
     } else {
         $(`#grupo_${campo}`).addClass('formulario_grupo_incorrecto');
@@ -57,7 +59,15 @@ const validForm = (e) => {
 }
 
 const validAll = () =>{
-	if($('#form').valid()){
-	  $('#btnmodal').removeAttr('disabled')
-	}
+
+    if((campos.name != '') && (campos.telf != '') && (campos.email != '')){
+		$('#btnmodal').removeAttr('disabled')
+        console.log()
+	}else{
+        $('#btnmodal').attr("disabled", 'disabled')
+    }	
 }
+
+// if($('#form').valid()){
+	//   $('#btnmodal').removeAttr('disabled')
+	// }

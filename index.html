@@ -191,7 +191,9 @@
                                         name="name" 
                                         id="name"
                                         placeholder="&nbsp;"
+                                        onkeypress="validAll()"
                                         onchange="validAll()"
+                                        autocomplete="off"
                                         required>
                                     <span class="label">Nombre</span>
                                     <span class="focus-bg"></span>
@@ -206,8 +208,9 @@
                                         name="telf" 
                                         id="telf"
                                         placeholder="&nbsp;" 
-                                        onkeypress="control(event)"
+                                        onkeypress="control(event), validAll()"
                                         onchange="validAll()"
+                                        autocomplete="off"
                                         required
                                         >
                                     <span class="label">Telefono</span>
@@ -223,7 +226,9 @@
                                         name="email" 
                                         id="email"
                                         placeholder="&nbsp;" 
-                                        onchange="validAll()" 
+                                        onkeypress="validAll()"
+                                        onchange="validAll()"
+                                        autocomplete="off"
                                         required>
                                     <span class="label">Correo electrónico</span>
                                     <span class="focus-bg"></span>

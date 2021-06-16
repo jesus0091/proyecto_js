@@ -40,5 +40,6 @@ const dataClient = () => {
 
     form.reset();
     eraseIcons();
+    $('#btnmodal').attr("disabled", 'disabled')
 
 }
