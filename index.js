@@ -16,30 +16,29 @@ const dataClient = () => {
     let day = $('.event-day').html();
     let date = $('.event-date').html();
     let Fecha = day + ', ' + date;
-
+    let Hour = $(".event-hour").html();
     let NombreCliente = $("#name").val();
     let TelefonoCliente = $("#telf").val();
     let CorreoCliente = $("#email").val();
 
-    const Modal = document.querySelector("#dataUser");
+    const btnModal = document.querySelector("#dataUser");
     let elementodiv = document.createElement("div");
-    Modal.innerHTML = ``;
+    btnModal.innerHTML = ``;
     elementodiv.innerHTML = `
     <div class="Modal_content container">
-        <img class="ImagenModal" src="imagenes/comprobado.svg" alt="">
+        <img class="ImagenModal" src="images/comprobado.svg" alt="">
         <h2 class="text-center">¡Hola, ${NombreCliente}!</h2>
-        <p class="">Tu turno se ha generado con éxito para el dia <span class="font-weight-bold">${Fecha}</span> a las con <span class="font-weight-bold">${Barbero}</span></p>
+        <p class="">Tu turno se ha generado con éxito para el dia <span class="font-weight-bold">${Fecha}</span> a las <span class="font-weight-bold">${Hour}</span> con <span class="font-weight-bold">${Barbero}</span></p>
         <p class="m-0">Cualquier cosa nos ponemos en contacto contigo a traves del <span class="font-weight-bold">${TelefonoCliente}</span> ó <span class="font-weight-bold">${CorreoCliente}</span></p>   
     </div>
     `;
-    Modal.appendChild(elementodiv) 
-
+    btnModal.appendChild(elementodiv);
+    
     var NuevoCliente = new Cliente(NombreCliente, TelefonoCliente, CorreoCliente, Barbero);
     console.log(NuevoCliente);
     saveClient(NuevoCliente);
 
     form.reset();
     eraseIcons();
-    $('#btnmodal').attr("disabled", 'disabled')
-
+    btnDisabled();
 }

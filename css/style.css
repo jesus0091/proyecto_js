@@ -337,18 +337,19 @@ template {
   display: none;
 }
 
-body {
-  background-image: url(../imagenes/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: scroll;
-}
 * {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   letter-spacing: 0.5px;
   text-decoration: none;
+}
+
+body {
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: scroll;
 }
 
 header .navbar {
@@ -615,31 +616,31 @@ footer .icon-button {
   animation: pang-animation 1.2s ease-out forwards;
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(1) {
-  transform: translate(23px, 30%) rotate(40deg);
+  transform: translate(-9px, 30%) rotate(40deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(2) {
-  transform: translate(-4px, 30%) rotate(80deg);
+  transform: translate(9px, 30%) rotate(80deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(3) {
-  transform: translate(12px, 30%) rotate(120deg);
+  transform: translate(3px, 30%) rotate(120deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(4) {
-  transform: translate(-21px, 30%) rotate(160deg);
+  transform: translate(18px, 30%) rotate(160deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(5) {
-  transform: translate(6px, 30%) rotate(200deg);
+  transform: translate(-3px, 30%) rotate(200deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(6) {
-  transform: translate(15px, 30%) rotate(240deg);
+  transform: translate(4px, 30%) rotate(240deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(7) {
-  transform: translate(-12px, 30%) rotate(280deg);
+  transform: translate(-6px, 30%) rotate(280deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(8) {
-  transform: translate(9px, 30%) rotate(320deg);
+  transform: translate(8px, 30%) rotate(320deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(9) {
-  transform: translate(-12px, 30%) rotate(360deg);
+  transform: translate(19px, 30%) rotate(360deg);
 }
 .wrapper input:checked ~ .btn {
   animation: plus-animation 0.5s ease-out forwards;
@@ -885,17 +886,17 @@ input[type=radio]:checked + label .border_color {
   justify-content: center;
   align-items: center;
   height: 60px;
-  color: #b3b3b3;
+  color: white;
   padding: 5px 15px;
   font-size: 20px;
   border-radius: 100px;
   margin: 5px;
   border: none !important;
-  background-color: #004d00;
-}
-.f_buttons .btn_submit:hover {
-  color: white;
   background-color: green;
+}
+.f_buttons .btn_submit:disabled {
+  color: white;
+  background-color: gray;
 }
 
 .selection {
@@ -1094,6 +1095,34 @@ html .calendar .card-body .days span {
 }
 html .calendar .card-body .days span:hover {
   background: white;
+}
+html .calendar .card-body .hours span {
+  background: rgba(128, 128, 128, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 50%;
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  html .calendar .card-body .hours span {
+    height: 27px;
+    width: 27px;
+    line-height: 27px;
+    border: none;
+  }
+}
+html .calendar .card-body .hours span.active {
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+html .calendar .card-body .hours span:hover {
+  background: gray;
+  color: black;
 }
 html .calendar .card-body .dates span {
   background: rgba(128, 128, 128, 0.1);

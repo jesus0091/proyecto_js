@@ -11,17 +11,6 @@ const saveClient = (NuevoCliente) => {
 const control = (event) => {
     if (!(event.keyCode >= 48 && event.keyCode <= 57))
         event.preventDefault();
-    // console.log(event);
-}
-
-const eraseIcons = () => {
-    var borrar = document.querySelectorAll('#form i, p');
-    borrar.forEach(element => {
-        element.classList.remove('fa-check-circle');
-        element.classList.remove('fa-times-circle');
-        element.classList.remove('formulario_input_error_activo');
-    });
-    $('#btnmodal').attr("disabled", 'disabled')
 }
 
 const validField = (expresion, input, campo) => {
@@ -43,6 +32,15 @@ const validField = (expresion, input, campo) => {
     }
 }
 
+const eraseIcons = () => {
+    var borrar = document.querySelectorAll('#form i, p');
+    borrar.forEach(element => {
+        element.classList.remove('fa-check-circle');
+        element.classList.remove('fa-times-circle');
+        element.classList.remove('formulario_input_error_activo');
+    });
+}
+
 const validForm = (e) => {
     switch (e.target.name) {
         case "name":
@@ -54,20 +52,17 @@ const validForm = (e) => {
         case "email":
             validField(expresiones.email, e.target, 'email');
             break;
-
     }
 }
 
 const validAll = () =>{
-
     if((campos.name != '') && (campos.telf != '') && (campos.email != '')){
-		$('#btnmodal').removeAttr('disabled')
-        console.log()
+		$('#btnmodal').removeAttr("disabled");
 	}else{
-        $('#btnmodal').attr("disabled", 'disabled')
-    }	
+        $('#btnmodal').attr( 'disabled' , "disabled");
+    }
 }
 
-// if($('#form').valid()){
-	//   $('#btnmodal').removeAttr('disabled')
-	// }
+const btnDisabled = () =>{
+    $('#btnmodal').attr( 'disabled' , "disabled");
+}

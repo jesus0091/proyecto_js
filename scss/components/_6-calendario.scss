@@ -24,7 +24,7 @@ html {
             }
 
             &-body {
-                // background: #f1acb7;
+                
 
                 .days {
                     span {
@@ -45,6 +45,37 @@ html {
 
                         &:hover {
                             background: white;
+                        }
+                    }
+                }
+                .hours {
+                    span {
+                        background: rgba(gray, 0.1);
+                        border: 0.5px solid rgba(white, 0.1);
+                        color: white;
+                        border-radius: 50%;
+                        display: inline-block;
+                        height: 45px;
+                        width: 45px;
+                        line-height: 45px;
+                        cursor: pointer;
+
+                        @media (max-width: $breakpoint-tablet) {
+                            height: 27px;
+                            width: 27px;
+                            line-height: 27px;
+                            border: none;
+                        }
+
+                        &.active {
+                            background: white;
+                            color: black;
+                            font-weight: bold;
+                        }
+
+                        &:hover {
+                            background: gray;
+                            color: black;
                         }
                     }
                 }
@@ -116,6 +147,11 @@ html {
         }
     }
 }
+
+
+
+
+
 @media (max-width: $breakpoint-tablet) {
     html {
         body {

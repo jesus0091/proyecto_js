@@ -52,18 +52,20 @@ let year = c_date.getFullYear();
                                 <span class="event-day">Monday</span>
                             </div> 
                             <div class="events-today my-3 px-3">
-                                <table>
-                                    <tr>
-                                         <th><span>10:00</span></th>                                                                       
-                                    </tr>
-                                    <tr>
-                                        <th><span>10:30</span></th>                                                                       
-                                    </tr>
-                                    <tr>
-                                        <th><span>11:00</span></th>                                                                       
-                                    </tr>
-                                </table>            
-                            </div>                
+                                <table class="table table-sm table-borderless">
+                                    <thead class="hours text-center">
+                                        <tr>
+                                            ${Object.keys(hours).map(key => (
+                                                `<th><span class="showHours">${hours[key]}</span></td>`
+                                            )).join('')}
+                                        </tr>
+                                    </thead>
+                                </table>          
+                            </div>
+                            <div class="text-center">
+                                <span class="event-message">Selecciona la hora</span>
+                                <span class="event-hour"></span>
+                            </div>               
                         </div>
                     </div>                            
                 </div>
@@ -146,6 +148,7 @@ function renderCalendar(m, y) {
 }
 renderCalendar(month, year)
 
+// $(.hours).span.classList.add('showEvent');
 
 $(function () {
     function showEvent(eventDate) {
@@ -178,7 +181,22 @@ $(function () {
         console.log(todaysDate);
         console.log(eventDay);
     })
+    
     $(document).on('click', '.hide', function () {
         $('#event').addClass('d-none');
+    })
+
+    $(document).on('click', '.showHours', function () {
+        $('.showHours').removeClass('active');
+        $('#event').removeClass('d-none');
+        $(this).addClass('active');
+        let todaysHours = $(this).text();
+        let eventDay = days[new Date(year, month, $(this).text()).getDay()];
+        let eventDate = $(this).text() + month + year;
+        console.log('cliked');
+        $('.event-message').html(`Seleccionaste las: `);
+        $('.event-hour').html(todaysHours).data('eventdate', eventDate);
+        showEvent(todaysHours);
+        // console.log(todaysHours);
     })
 })

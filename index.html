@@ -147,7 +147,7 @@
                                     value="Dani Castle" checked>
                                 <label class="form-check-label" for="Barbero1">
                                     <div class="border_color">
-                                        <img class="img_barber" src="imagenes/barberos-01.png" alt="">
+                                        <img class="img_barber" src="images/barberos-01.png" alt="">
                                     </div>
                                     <p>Dani Castle</p>
                                 </label>
@@ -157,7 +157,7 @@
                                     value="Erick Cortéz">
                                 <label class="form-check-label" for="Barbero2">
                                     <div class="border_color">
-                                        <img class="img_barber" src="imagenes/barberos-02.png" alt="">
+                                        <img class="img_barber" src="images/barberos-02.png" alt="">
                                     </div>
                                     <p>Erick Cortéz</p>
                                 </label>
@@ -167,7 +167,7 @@
                                     value="Pablo Monty">
                                 <label class="form-check-label" for="Barbero3">
                                     <div class="border_color">
-                                        <img class="img_barber" src="imagenes/barberos-03.png" alt="">
+                                        <img class="img_barber" src="images/barberos-03.png" alt="">
                                     </div>
                                     <p>Pablo Monty</p>
                                 </label>
@@ -236,11 +236,16 @@
                                     <p class="formulario_input_error">Escribe un correo válido</p>
                                 </label>
                                 <div class="f_buttons d-flex justify-content-end align-items-center">
-                                    <button class="btn btn_erase" type="reset" onclick="eraseIcons()">
+                                    <button class="btn btn_erase" type="reset" onclick="eraseIcons(), btnDisabled()">
                                         <i class="fas fa-backspace"></i>
                                     </button>
-                                    <button id="btnmodal" class="btn btn_submit" type="button" 
-                                        data-toggle="modal" data-target="#ModalReserva" disabled="disabled" onclick="dataClient()">
+                                    <button id="btnmodal" 
+                                        class="btn btn_submit" 
+                                        type="button" 
+                                        data-toggle="modal" 
+                                        data-target="#ModalReserva" 
+                                        disabled="disabled" 
+                                        onclick="dataClient()">
                                         <span class="mr-2">Confirmar</span>
                                         <i class="far fa-paper-plane"></i>
                                     </button>
@@ -254,13 +259,17 @@
         </div>
     </section>
     <!------------------------------- Modal --------------------------------------->
-    <div class="col-12  modal fade" id="ModalReserva" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="col-12  modal" id="ModalReserva" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content modal_style">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Su reserva</h5>
-                    <button type="button" class="icon-modal" data-dismiss="modal" aria-label="Close">
+                    <button 
+                    type="button" 
+                    class="icon-modal" 
+                    data-dismiss="modal" 
+                    aria-label="Close" onclick="btnDisabled()">
                         <span aria-hidden="true"><i class="fas fa-times"></i></span>
                     </button>
                 </div>
@@ -280,7 +289,7 @@
                 <div class="col-12 col-md-3 media">
                     <div class="card-media">
                         <div class="media-img">
-                            <img src="imagenes/clientes-04.png" class="mr-3" alt="...">
+                            <img src="images/clientes-04.png" class="mr-3" alt="...">
                         </div>
                         <div class="media-body">
                             <h5 class="mt-0">Andrés</h5>
@@ -292,7 +301,7 @@
                 <div class="col-12 col-md-3 media">
                     <div class="card-media">
                         <div class="media-img">
-                            <img src="imagenes/clientes-05.png" class="mr-3" alt="...">
+                            <img src="images/clientes-05.png" class="mr-3" alt="...">
                         </div>
                         <div class="media-body">
                             <h5 class="mt-0">Mariano</h5>
@@ -305,7 +314,7 @@
                 <div class="col-12 col-md-3  media">
                     <div class="card-media">
                         <div class="media-img">
-                            <img src="imagenes/clientes-06.png" class="mr-3" alt="...">
+                            <img src="images/clientes-06.png" class="mr-3" alt="...">
                         </div>
                         <div class="media-body">
                             <h5 class="mt-0">Bruno</h5>
@@ -317,7 +326,7 @@
                 <div class="col-12 col-md-3  media">
                     <div class="card-media">
                         <div class="media-img">
-                            <img src="imagenes/clientes-07.png" class="mr-3" alt="...">
+                            <img src="images/clientes-07.png" class="mr-3" alt="...">
                         </div>
                         <div class="media-body">
                             <h5 class="mt-0">Lucas</h5>
