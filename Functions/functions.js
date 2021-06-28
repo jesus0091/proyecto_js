@@ -56,7 +56,7 @@ const validForm = (e) => {
 }
 
 const validAll = () =>{
-    if((campos.name != '') && (campos.telf != '') && (campos.email != '') && (Barbero != '')){
+    if((campos.name != '') && (campos.telf != '') && (campos.email != '')){
 		$('#btnmodal').removeAttr("disabled");
 	}else{
         $('#btnmodal').attr( 'disabled' , "disabled");
