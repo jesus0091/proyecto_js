@@ -1,12 +1,25 @@
+@import '7-variables';
+
 header{
     
     .navbar{
         border-radius: 15px 15px 0 0;
-        background: rgba(black, 0.8);
+        background: var(--theme-bg-color);
         backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(gray, 0.2);
+        border-bottom: 1px solid var(--theme-border-color);
+        color: var(--theme-text-h-color);
+
+        a {
+            text-decoration: none;
+            color: var(--theme-text-h-color);
+            font-family: 'Lato', sans-serif;
+            font-weight: bolder;
+            font-size: 1.75rem;
+            padding: 0;
+        }
         @media only screen and (max-width: 578px) {
             border-radius: 0;
         }
     }
 }
+

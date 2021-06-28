@@ -1,8 +1,10 @@
+@import '7-variables';
+
 .comments {
-    background: rgba(black, 0.8);
+    background: var(--theme-bg-color);
     backdrop-filter: blur(10px);
     padding: 50px;
-    border-top: 1px solid rgba(gray, 0.2);
+    border-top: 1px solid var(--theme-border-color);
 
     @media only screen and (max-width: 578px) {
         padding: 20px;
@@ -10,7 +12,7 @@
 
     h2 {
         font-family: 'Lato', sans-serif;
-        color: white;
+        color: var(--theme-text-h-color);
         letter-spacing: 1px;
     }
 
@@ -21,7 +23,7 @@
             display: flex;
             padding: 15px;
             border-radius: 15px;
-            background-color: rgba(black, 0.6);
+            background-color: var(--theme-bg-2-color);
             min-height: 200px;
             width: 100%;
             position: relative;
@@ -29,6 +31,9 @@
 
             @media only screen and (max-width: 578px) {
                 min-height: 150px;
+            }
+            @media only screen and (max-width: 768px) {
+                min-height: 100px;
             }
 
             .media-img {
@@ -42,15 +47,17 @@
             }
 
             .media-body {
-                color: white;
+                color: var(--theme-text-h-color);
 
                 h5 {
                     font-size: 18px;
+                    font-weight: bold;
+                    font-family: 'Lato', sans-serif;
                 }
 
                 p {
                     font-size: 15px;
-                    color: darkgray;
+                    color: var(--theme-text-h-color);
                 }
             }
 
@@ -81,4 +88,5 @@
     h2 {
         font-family: 'Lato', sans-serif;
     }
+    
 }

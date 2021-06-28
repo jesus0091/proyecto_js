@@ -1,5 +1,7 @@
+@import '7-variables';
+
 .turns {
-    background: rgba(black, 0.8);
+    background: var(--theme-bg-color);
     backdrop-filter: blur(10px);
 }
 
@@ -311,7 +313,7 @@
 
 .turn_collapse {
     padding: 0 50px 40px 50px;
-    background: rgba(black, 0.8);
+    background: var(--theme-bg-color);
     backdrop-filter: blur(10px);
     @media only screen and (max-width: 578px) {
         padding: 0 10px 10px 10px;
@@ -319,7 +321,7 @@
 
     .card-body {
         border-radius: 15px;
-        background-color: rgba(black, 0.5);
+        background: var(--theme-bg-2-color);
 
         h3 {
             margin: 0 0 20px 20px;

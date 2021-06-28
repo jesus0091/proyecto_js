@@ -1,3 +1,4 @@
+@import '7-variables';
 $breakpoint-tablet: 768px;
 
 html {
@@ -53,18 +54,19 @@ html {
                         background: rgba(gray, 0.1);
                         border: 0.5px solid rgba(white, 0.1);
                         color: white;
-                        border-radius: 50%;
+                        border-radius: 50px;
                         display: inline-block;
                         height: 45px;
-                        width: 45px;
+                        width: 60px;
                         line-height: 45px;
                         cursor: pointer;
+                        font-weight: normal !important;
+                        margin: 5px;
 
                         @media (max-width: $breakpoint-tablet) {
                             height: 27px;
-                            width: 27px;
+                            width: 55px;
                             line-height: 27px;
-                            border: none;
                         }
 
                         &.active {
@@ -148,9 +150,10 @@ html {
     }
 }
 
-
-
-
+.unclickable {
+    pointer-events: none;
+    color:gray !important;  
+}
 
 @media (max-width: $breakpoint-tablet) {
     html {

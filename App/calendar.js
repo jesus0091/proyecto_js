@@ -1,5 +1,5 @@
 //Constantes globales para el calendario
-const hours = ['10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00',]
+const hours = ['09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00', '18:00', '19:00', '20:00' ]
 const days = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
 const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
@@ -8,7 +8,7 @@ let c_date = new Date();
 let day = c_date.getDay();
 let month = c_date.getMonth();
 let year = c_date.getFullYear();
-
+// let today = getDate();
 // Funcion para agregar el HTML del calendario a la pagina
 (function App() {
     // Calendario con los dias mapeados
@@ -52,15 +52,15 @@ let year = c_date.getFullYear();
                                 <span class="event-day">Monday</span>
                             </div> 
                             <div class="events-today my-3 px-3">
-                                <table class="table table-sm table-borderless">
-                                    <thead class="hours text-center">
-                                        <tr>
+                                
+                                    <div class="hours text-center">
+                                        <div>
                                             ${Object.keys(hours).map(key => (
-                                                `<th><span class="showHours">${hours[key]}</span></td>`
+                                                `<span class="showHours">${hours[key]}</span>`
                                             )).join('')}
-                                        </tr>
-                                    </thead>
-                                </table>          
+                                        </div>
+                                    </div>
+                                      
                             </div>
                             <div class="text-center">
                                 <span class="event-message">Selecciona la hora</span>
@@ -148,8 +148,6 @@ function renderCalendar(m, y) {
 }
 renderCalendar(month, year)
 
-// $(.hours).span.classList.add('showEvent');
-
 $(function () {
     function showEvent(eventDate) {
         let storedEvents = JSON.parse(localStorage.getItem('events'));
@@ -198,5 +196,8 @@ $(function () {
         $('.event-hour').html(todaysHours).data('eventdate', eventDate);
         showEvent(todaysHours);
         // console.log(todaysHours);
+    })
+    $(document).on('click', '.unclickable', function () {
+        $('.unclickable').onclick(false);
     })
 })

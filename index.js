@@ -1,3 +1,4 @@
+
 const dataClient = () => {
     
     let Barbero = '';
@@ -40,5 +41,5 @@ const dataClient = () => {
 
     form.reset();
     eraseIcons();
-    btnDisabled();
+    // btnDisabled();
 }

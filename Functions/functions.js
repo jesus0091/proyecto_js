@@ -56,7 +56,7 @@ const validForm = (e) => {
 }
 
 const validAll = () =>{
-    if((campos.name != '') && (campos.telf != '') && (campos.email != '')){
+    if((campos.name != '') && (campos.telf != '') && (campos.email != '') && (Barbero != '')){
 		$('#btnmodal').removeAttr("disabled");
 	}else{
         $('#btnmodal').attr( 'disabled' , "disabled");
@@ -66,3 +66,9 @@ const validAll = () =>{
 const btnDisabled = () =>{
     $('#btnmodal').attr( 'disabled' , "disabled");
 }
+
+const toggleButton = document.querySelector('.dark-light');
+   
+   toggleButton.addEventListener('click', () => {
+     document.body.classList.toggle('light-mode');
+   });

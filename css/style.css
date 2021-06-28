@@ -337,26 +337,91 @@ template {
   display: none;
 }
 
+:root {
+  --theme-bg-color: rgba(0 0 0 / 0.8);
+  --theme-bg-2-color: rgba(0 0 0 / 0.5);
+  --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-text-h-color: rgba(255 255 255 / 1);
+  --theme-darkgray: rgba(128 128 128 / 1);
+}
+
+.light-mode {
+  --theme-bg-color: rgba(255 255 255 / 0.2);
+  --theme-bg-2-color: rgba(255 255 255 / 0.2);
+  --theme-border-color: rgba(0 0 0 / 0.2);
+  --theme-text-h-color: rgba(0 0 0 / 1);
+  --theme-darkgray: rgba(39 55 70 / 1);
+}
+
 * {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   letter-spacing: 0.5px;
+}
+* a {
   text-decoration: none;
 }
 
 body {
-  background-image: url(../images/background.jpg);
+  background-image: url(https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-dark-wwdc-2020-5120x2880-1432.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   overflow: scroll;
 }
 
+.dark-light {
+  background-color: var(--dropdown-bg);
+  box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 50%;
+  z-index: 3;
+  cursor: pointer;
+}
+.dark-light svg {
+  width: 24px;
+  flex-shrink: 0;
+  fill: #ffce45;
+  stroke: #ffce45;
+  transition: 0.5s;
+}
+
+.light-mode .dark-light svg {
+  fill: transparent;
+  stroke: var(--theme-text-h-color);
+}
+
+:root {
+  --theme-bg-color: rgba(0 0 0 / 0.8);
+  --theme-bg-2-color: rgba(0 0 0 / 0.5);
+  --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-text-h-color: rgba(255 255 255 / 1);
+  --theme-darkgray: rgba(128 128 128 / 1);
+}
+
+.light-mode {
+  --theme-bg-color: rgba(255 255 255 / 0.2);
+  --theme-bg-2-color: rgba(255 255 255 / 0.2);
+  --theme-border-color: rgba(0 0 0 / 0.2);
+  --theme-text-h-color: rgba(0 0 0 / 1);
+  --theme-darkgray: rgba(39 55 70 / 1);
+}
+
 header .navbar {
   border-radius: 15px 15px 0 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--theme-bg-color);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  border-bottom: 1px solid var(--theme-border-color);
+  color: var(--theme-text-h-color);
+}
+header .navbar a {
+  text-decoration: none;
+  color: var(--theme-text-h-color);
+  font-family: "Lato", sans-serif;
+  font-weight: bolder;
+  font-size: 1.75rem;
+  padding: 0;
 }
 @media only screen and (max-width: 578px) {
   header .navbar {
@@ -364,11 +429,27 @@ header .navbar {
   }
 }
 
+:root {
+  --theme-bg-color: rgba(0 0 0 / 0.8);
+  --theme-bg-2-color: rgba(0 0 0 / 0.5);
+  --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-text-h-color: rgba(255 255 255 / 1);
+  --theme-darkgray: rgba(128 128 128 / 1);
+}
+
+.light-mode {
+  --theme-bg-color: rgba(255 255 255 / 0.2);
+  --theme-bg-2-color: rgba(255 255 255 / 0.2);
+  --theme-border-color: rgba(0 0 0 / 0.2);
+  --theme-text-h-color: rgba(0 0 0 / 1);
+  --theme-darkgray: rgba(39 55 70 / 1);
+}
+
 .comments {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--theme-bg-color);
   backdrop-filter: blur(10px);
   padding: 50px;
-  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  border-top: 1px solid var(--theme-border-color);
 }
 @media only screen and (max-width: 578px) {
   .comments {
@@ -377,7 +458,7 @@ header .navbar {
 }
 .comments h2 {
   font-family: "Lato", sans-serif;
-  color: white;
+  color: var(--theme-text-h-color);
   letter-spacing: 1px;
 }
 .comments .media {
@@ -387,7 +468,7 @@ header .navbar {
   display: flex;
   padding: 15px;
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--theme-bg-2-color);
   min-height: 200px;
   width: 100%;
   position: relative;
@@ -398,20 +479,27 @@ header .navbar {
     min-height: 150px;
   }
 }
+@media only screen and (max-width: 768px) {
+  .comments .media .card-media {
+    min-height: 100px;
+  }
+}
 .comments .media .card-media .media-img img {
   height: 80px;
   width: 80px;
   border-radius: 1000px;
 }
 .comments .media .card-media .media-body {
-  color: white;
+  color: var(--theme-text-h-color);
 }
 .comments .media .card-media .media-body h5 {
   font-size: 18px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
 }
 .comments .media .card-media .media-body p {
   font-size: 15px;
-  color: darkgray;
+  color: var(--theme-text-h-color);
 }
 .comments .media .card-media .quote-mark {
   position: absolute;
@@ -435,14 +523,30 @@ header .navbar {
   font-family: "Lato", sans-serif;
 }
 
+:root {
+  --theme-bg-color: rgba(0 0 0 / 0.8);
+  --theme-bg-2-color: rgba(0 0 0 / 0.5);
+  --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-text-h-color: rgba(255 255 255 / 1);
+  --theme-darkgray: rgba(128 128 128 / 1);
+}
+
+.light-mode {
+  --theme-bg-color: rgba(255 255 255 / 0.2);
+  --theme-bg-2-color: rgba(255 255 255 / 0.2);
+  --theme-border-color: rgba(0 0 0 / 0.2);
+  --theme-text-h-color: rgba(0 0 0 / 1);
+  --theme-darkgray: rgba(39 55 70 / 1);
+}
+
 footer .footer-bg {
   text-decoration: none;
-  color: gray;
+  color: var(--theme-text-h-color);
   font-size: 16px;
   letter-spacing: 0.5px;
   padding: 15px 20px;
-  border-top: 1px solid rgba(128, 128, 128, 0.2);
-  background: rgba(0, 0, 0, 0.8);
+  border-top: 1px solid var(--theme-border-color);
+  background: var(--theme-bg-color);
   backdrop-filter: blur(10px);
   border-radius: 0 0 15px 15px;
 }
@@ -450,7 +554,7 @@ footer .icon-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(128, 128, 128, 0.5);
+  border: 1px solid var(--theme-darkgray);
   border-radius: 1000px;
   cursor: pointer;
   font-size: 16px;
@@ -458,16 +562,37 @@ footer .icon-button {
   width: 30px;
   margin: 0 5px;
   text-decoration: none;
-  color: gray;
+  color: var(--theme-darkgray);
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
+@media only screen and (max-width: 578px) {
+  footer p {
+    font-size: 13px;
+  }
+}
+
+:root {
+  --theme-bg-color: rgba(0 0 0 / 0.8);
+  --theme-bg-2-color: rgba(0 0 0 / 0.5);
+  --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-text-h-color: rgba(255 255 255 / 1);
+  --theme-darkgray: rgba(128 128 128 / 1);
+}
+
+.light-mode {
+  --theme-bg-color: rgba(255 255 255 / 0.2);
+  --theme-bg-2-color: rgba(255 255 255 / 0.2);
+  --theme-border-color: rgba(0 0 0 / 0.2);
+  --theme-text-h-color: rgba(0 0 0 / 1);
+  --theme-darkgray: rgba(39 55 70 / 1);
+}
 
 .turns {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--theme-bg-color);
   backdrop-filter: blur(10px);
 }
 
@@ -616,31 +741,31 @@ footer .icon-button {
   animation: pang-animation 1.2s ease-out forwards;
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(1) {
-  transform: translate(-9px, 30%) rotate(40deg);
+  transform: translate(7px, 30%) rotate(40deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(2) {
-  transform: translate(9px, 30%) rotate(80deg);
+  transform: translate(16px, 30%) rotate(80deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(3) {
-  transform: translate(3px, 30%) rotate(120deg);
+  transform: translate(15px, 30%) rotate(120deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(4) {
-  transform: translate(18px, 30%) rotate(160deg);
+  transform: translate(-3px, 30%) rotate(160deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(5) {
-  transform: translate(-3px, 30%) rotate(200deg);
+  transform: translate(15px, 30%) rotate(200deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(6) {
-  transform: translate(4px, 30%) rotate(240deg);
+  transform: translate(23px, 30%) rotate(240deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(7) {
-  transform: translate(-6px, 30%) rotate(280deg);
+  transform: translate(17px, 30%) rotate(280deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(8) {
-  transform: translate(8px, 30%) rotate(320deg);
+  transform: translate(-16px, 30%) rotate(320deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(9) {
-  transform: translate(19px, 30%) rotate(360deg);
+  transform: translate(-14px, 30%) rotate(360deg);
 }
 .wrapper input:checked ~ .btn {
   animation: plus-animation 0.5s ease-out forwards;
@@ -752,7 +877,7 @@ footer .icon-button {
 
 .turn_collapse {
   padding: 0 50px 40px 50px;
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--theme-bg-color);
   backdrop-filter: blur(10px);
 }
 @media only screen and (max-width: 578px) {
@@ -762,7 +887,7 @@ footer .icon-button {
 }
 .turn_collapse .card-body {
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: var(--theme-bg-2-color);
 }
 .turn_collapse .card-body h3 {
   margin: 0 0 20px 20px;
@@ -1059,6 +1184,22 @@ input[type=radio]:checked + label .border_color {
   display: none !important;
 }
 
+:root {
+  --theme-bg-color: rgba(0 0 0 / 0.8);
+  --theme-bg-2-color: rgba(0 0 0 / 0.5);
+  --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-text-h-color: rgba(255 255 255 / 1);
+  --theme-darkgray: rgba(128 128 128 / 1);
+}
+
+.light-mode {
+  --theme-bg-color: rgba(255 255 255 / 0.2);
+  --theme-bg-2-color: rgba(255 255 255 / 0.2);
+  --theme-border-color: rgba(0 0 0 / 0.2);
+  --theme-text-h-color: rgba(0 0 0 / 1);
+  --theme-darkgray: rgba(39 55 70 / 1);
+}
+
 html .calendar .card {
   background: none !important;
   overflow: hidden;
@@ -1100,19 +1241,20 @@ html .calendar .card-body .hours span {
   background: rgba(128, 128, 128, 0.1);
   border: 0.5px solid rgba(255, 255, 255, 0.1);
   color: white;
-  border-radius: 50%;
+  border-radius: 50px;
   display: inline-block;
   height: 45px;
-  width: 45px;
+  width: 60px;
   line-height: 45px;
   cursor: pointer;
+  font-weight: normal !important;
+  margin: 5px;
 }
 @media (max-width: 768px) {
   html .calendar .card-body .hours span {
     height: 27px;
-    width: 27px;
+    width: 55px;
     line-height: 27px;
-    border: none;
   }
 }
 html .calendar .card-body .hours span.active {
@@ -1177,6 +1319,11 @@ html .calendar .card#event .card-body .events-today {
   color: white;
 }
 
+.unclickable {
+  pointer-events: none;
+  color: gray !important;
+}
+
 @media (max-width: 768px) {
   html body .pa-sm {
     position: absolute;
@@ -1196,21 +1343,19 @@ html .calendar .card#event .card-body .events-today {
   }
 }
 :root {
-  --theme-bg-color: rgba(16 18 27 / 40%);
-  --border-color: rgba(113 119 144 / 25%);
-  --theme-color: #f9fafb;
-  --inactive-color: rgb(113 119 144 / 78%);
-  --body-font: "Poppins", sans-serif;
-  --hover-menu-bg: rgba(12 15 25 / 30%);
-  --content-title-color: #999ba5;
-  --content-bg: rgb(146 151 179 / 13%);
-  --button-inactive: rgb(249 250 251 / 55%);
-  --dropdown-bg: #21242d;
-  --dropdown-hover: rgb(42 46 60);
-  --popup-bg: rgb(22 25 37);
-  --search-bg: #14162b;
-  --overlay-bg: rgba(36, 39, 59, 0.3);
-  --scrollbar-bg: rgb(1 2 3 / 40%);
+  --theme-bg-color: rgba(0 0 0 / 0.8);
+  --theme-bg-2-color: rgba(0 0 0 / 0.5);
+  --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-text-h-color: rgba(255 255 255 / 1);
+  --theme-darkgray: rgba(128 128 128 / 1);
+}
+
+.light-mode {
+  --theme-bg-color: rgba(255 255 255 / 0.2);
+  --theme-bg-2-color: rgba(255 255 255 / 0.2);
+  --theme-border-color: rgba(0 0 0 / 0.2);
+  --theme-text-h-color: rgba(0 0 0 / 1);
+  --theme-darkgray: rgba(39 55 70 / 1);
 }
 
 /*# sourceMappingURL=style.css.map */
