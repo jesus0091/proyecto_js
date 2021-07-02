@@ -341,8 +341,11 @@ template {
   --theme-bg-color: rgba(0 0 0 / 0.8);
   --theme-bg-2-color: rgba(0 0 0 / 0.5);
   --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-form_color: rgba(128 128 128 / 0.5);
   --theme-text-h-color: rgba(255 255 255 / 1);
   --theme-darkgray: rgba(128 128 128 / 1);
+  --theme-barber-img: rgba(0 0 0 / 1);
+  --theme-barber-2-img: rgba(42 42 42 / 1);
 }
 
 .light-mode {
@@ -351,6 +354,9 @@ template {
   --theme-border-color: rgba(0 0 0 / 0.2);
   --theme-text-h-color: rgba(0 0 0 / 1);
   --theme-darkgray: rgba(39 55 70 / 1);
+  --theme-form_color: rgba( 182 234 255 / 0.5);
+  --theme-barber-img: rgba(128 128 128 / 1);
+  --theme-barber-2-img: rgba(128 128 128 / 0.3);
 }
 
 * {
@@ -378,6 +384,7 @@ body {
   border-radius: 50%;
   z-index: 3;
   cursor: pointer;
+  transition: 0.3s easy all;
 }
 .dark-light svg {
   width: 24px;
@@ -387,6 +394,9 @@ body {
   transition: 0.5s;
 }
 
+.light-mode {
+  transition: 0.3s easy all;
+}
 .light-mode .dark-light svg {
   fill: transparent;
   stroke: var(--theme-text-h-color);
@@ -396,8 +406,11 @@ body {
   --theme-bg-color: rgba(0 0 0 / 0.8);
   --theme-bg-2-color: rgba(0 0 0 / 0.5);
   --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-form_color: rgba(128 128 128 / 0.5);
   --theme-text-h-color: rgba(255 255 255 / 1);
   --theme-darkgray: rgba(128 128 128 / 1);
+  --theme-barber-img: rgba(0 0 0 / 1);
+  --theme-barber-2-img: rgba(42 42 42 / 1);
 }
 
 .light-mode {
@@ -406,6 +419,9 @@ body {
   --theme-border-color: rgba(0 0 0 / 0.2);
   --theme-text-h-color: rgba(0 0 0 / 1);
   --theme-darkgray: rgba(39 55 70 / 1);
+  --theme-form_color: rgba( 182 234 255 / 0.5);
+  --theme-barber-img: rgba(128 128 128 / 1);
+  --theme-barber-2-img: rgba(128 128 128 / 0.3);
 }
 
 header .navbar {
@@ -433,8 +449,11 @@ header .navbar a {
   --theme-bg-color: rgba(0 0 0 / 0.8);
   --theme-bg-2-color: rgba(0 0 0 / 0.5);
   --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-form_color: rgba(128 128 128 / 0.5);
   --theme-text-h-color: rgba(255 255 255 / 1);
   --theme-darkgray: rgba(128 128 128 / 1);
+  --theme-barber-img: rgba(0 0 0 / 1);
+  --theme-barber-2-img: rgba(42 42 42 / 1);
 }
 
 .light-mode {
@@ -443,6 +462,9 @@ header .navbar a {
   --theme-border-color: rgba(0 0 0 / 0.2);
   --theme-text-h-color: rgba(0 0 0 / 1);
   --theme-darkgray: rgba(39 55 70 / 1);
+  --theme-form_color: rgba( 182 234 255 / 0.5);
+  --theme-barber-img: rgba(128 128 128 / 1);
+  --theme-barber-2-img: rgba(128 128 128 / 0.3);
 }
 
 .comments {
@@ -527,8 +549,11 @@ header .navbar a {
   --theme-bg-color: rgba(0 0 0 / 0.8);
   --theme-bg-2-color: rgba(0 0 0 / 0.5);
   --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-form_color: rgba(128 128 128 / 0.5);
   --theme-text-h-color: rgba(255 255 255 / 1);
   --theme-darkgray: rgba(128 128 128 / 1);
+  --theme-barber-img: rgba(0 0 0 / 1);
+  --theme-barber-2-img: rgba(42 42 42 / 1);
 }
 
 .light-mode {
@@ -537,6 +562,9 @@ header .navbar a {
   --theme-border-color: rgba(0 0 0 / 0.2);
   --theme-text-h-color: rgba(0 0 0 / 1);
   --theme-darkgray: rgba(39 55 70 / 1);
+  --theme-form_color: rgba( 182 234 255 / 0.5);
+  --theme-barber-img: rgba(128 128 128 / 1);
+  --theme-barber-2-img: rgba(128 128 128 / 0.3);
 }
 
 footer .footer-bg {
@@ -579,8 +607,11 @@ footer .icon-button {
   --theme-bg-color: rgba(0 0 0 / 0.8);
   --theme-bg-2-color: rgba(0 0 0 / 0.5);
   --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-form_color: rgba(128 128 128 / 0.5);
   --theme-text-h-color: rgba(255 255 255 / 1);
   --theme-darkgray: rgba(128 128 128 / 1);
+  --theme-barber-img: rgba(0 0 0 / 1);
+  --theme-barber-2-img: rgba(42 42 42 / 1);
 }
 
 .light-mode {
@@ -589,6 +620,9 @@ footer .icon-button {
   --theme-border-color: rgba(0 0 0 / 0.2);
   --theme-text-h-color: rgba(0 0 0 / 1);
   --theme-darkgray: rgba(39 55 70 / 1);
+  --theme-form_color: rgba( 182 234 255 / 0.5);
+  --theme-barber-img: rgba(128 128 128 / 1);
+  --theme-barber-2-img: rgba(128 128 128 / 0.3);
 }
 
 .turns {
@@ -741,31 +775,31 @@ footer .icon-button {
   animation: pang-animation 1.2s ease-out forwards;
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(1) {
-  transform: translate(7px, 30%) rotate(40deg);
+  transform: translate(-24px, 30%) rotate(40deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(2) {
-  transform: translate(16px, 30%) rotate(80deg);
+  transform: translate(-10px, 30%) rotate(80deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(3) {
-  transform: translate(15px, 30%) rotate(120deg);
+  transform: translate(5px, 30%) rotate(120deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(4) {
-  transform: translate(-3px, 30%) rotate(160deg);
+  transform: translate(-1px, 30%) rotate(160deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(5) {
-  transform: translate(15px, 30%) rotate(200deg);
+  transform: translate(7px, 30%) rotate(200deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(6) {
-  transform: translate(23px, 30%) rotate(240deg);
+  transform: translate(-13px, 30%) rotate(240deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(7) {
-  transform: translate(17px, 30%) rotate(280deg);
+  transform: translate(4px, 30%) rotate(280deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(8) {
-  transform: translate(-16px, 30%) rotate(320deg);
+  transform: translate(5px, 30%) rotate(320deg);
 }
 .wrapper input:checked ~ svg .shape:nth-of-type(9) {
-  transform: translate(-14px, 30%) rotate(360deg);
+  transform: translate(-20px, 30%) rotate(360deg);
 }
 .wrapper input:checked ~ .btn {
   animation: plus-animation 0.5s ease-out forwards;
@@ -845,7 +879,7 @@ footer .icon-button {
 .border_color {
   display: flex;
   width: 130px;
-  background: #343434;
+  background: var(--theme-barber-2-img);
   height: 130px;
   justify-content: center;
   align-content: center;
@@ -865,13 +899,13 @@ footer .icon-button {
   height: 120px;
   width: 120px;
   border-radius: 1000px;
-  border: 5px solid black;
+  border: 5px solid var(--theme-barber-img);
 }
 @media only screen and (max-width: 578px) {
   .border_color .img_barber {
     height: 75px;
     width: 75px;
-    border: 3px solid black;
+    border: 3px solid var(--theme-barber-img);
   }
 }
 
@@ -892,13 +926,13 @@ footer .icon-button {
 .turn_collapse .card-body h3 {
   margin: 0 0 20px 20px;
   font-family: "Lato", sans-serif;
-  color: white;
+  color: var(--theme-text-h-color);
   font-size: 22px;
   letter-spacing: 1px;
 }
 .turn_collapse .card-body p {
   text-decoration: none;
-  color: white;
+  color: var(--theme-text-h-color);
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   text-align: center;
@@ -920,7 +954,7 @@ input[type=radio]:checked + label .border_color {
 .form_style {
   padding: 20px !important;
   border-radius: 15px;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: var(--theme-form_color);
 }
 .form_style .inp {
   position: relative;
@@ -1188,8 +1222,11 @@ input[type=radio]:checked + label .border_color {
   --theme-bg-color: rgba(0 0 0 / 0.8);
   --theme-bg-2-color: rgba(0 0 0 / 0.5);
   --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-form_color: rgba(128 128 128 / 0.5);
   --theme-text-h-color: rgba(255 255 255 / 1);
   --theme-darkgray: rgba(128 128 128 / 1);
+  --theme-barber-img: rgba(0 0 0 / 1);
+  --theme-barber-2-img: rgba(42 42 42 / 1);
 }
 
 .light-mode {
@@ -1198,6 +1235,9 @@ input[type=radio]:checked + label .border_color {
   --theme-border-color: rgba(0 0 0 / 0.2);
   --theme-text-h-color: rgba(0 0 0 / 1);
   --theme-darkgray: rgba(39 55 70 / 1);
+  --theme-form_color: rgba( 182 234 255 / 0.5);
+  --theme-barber-img: rgba(128 128 128 / 1);
+  --theme-barber-2-img: rgba(128 128 128 / 0.3);
 }
 
 html .calendar .card {
@@ -1236,6 +1276,8 @@ html .calendar .card-body .days span {
 }
 html .calendar .card-body .days span:hover {
   background: white;
+  color: black;
+  transition: 0.1s;
 }
 html .calendar .card-body .hours span {
   background: rgba(128, 128, 128, 0.1);
@@ -1346,8 +1388,11 @@ html .calendar .card#event .card-body .events-today {
   --theme-bg-color: rgba(0 0 0 / 0.8);
   --theme-bg-2-color: rgba(0 0 0 / 0.5);
   --theme-border-color: rgba(128 128 128 / 0.2);
+  --theme-form_color: rgba(128 128 128 / 0.5);
   --theme-text-h-color: rgba(255 255 255 / 1);
   --theme-darkgray: rgba(128 128 128 / 1);
+  --theme-barber-img: rgba(0 0 0 / 1);
+  --theme-barber-2-img: rgba(42 42 42 / 1);
 }
 
 .light-mode {
@@ -1356,6 +1401,9 @@ html .calendar .card#event .card-body .events-today {
   --theme-border-color: rgba(0 0 0 / 0.2);
   --theme-text-h-color: rgba(0 0 0 / 1);
   --theme-darkgray: rgba(39 55 70 / 1);
+  --theme-form_color: rgba( 182 234 255 / 0.5);
+  --theme-barber-img: rgba(128 128 128 / 1);
+  --theme-barber-2-img: rgba(128 128 128 / 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */

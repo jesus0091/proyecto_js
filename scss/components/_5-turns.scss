@@ -284,7 +284,7 @@
 .border_color {
     display: flex;
     width: 130px;
-    background: darken(gray, 30%);
+    background: var(--theme-barber-2-img);
     height: 130px;
     justify-content: center;
     align-content: center;
@@ -302,11 +302,11 @@
         height: 120px;
         width: 120px;
         border-radius: 1000px;
-        border: 5px solid black;
+        border: 5px solid var(--theme-barber-img);
         @media only screen and (max-width: 578px) {
             height: 75px;
             width: 75px;
-            border: 3px solid black;
+            border: 3px solid var(--theme-barber-img);
         }
     }
 }
@@ -326,14 +326,14 @@
         h3 {
             margin: 0 0 20px 20px;
             font-family: 'Lato', sans-serif;
-            color: white;
+            color: var(--theme-text-h-color);
             font-size: 22px;
             letter-spacing: 1px;
         }
 
         p {
             text-decoration: none;
-            color: white;
+            color: var(--theme-text-h-color);
             font-family: 'Roboto', sans-serif;
             font-size: 16px;
             text-align: center;
@@ -370,7 +370,7 @@ input[type="radio"]:checked + label{
 .form_style {
     padding: 20px !important;
     border-radius: 15px;
-    background-color: rgba(gray, 0.5);
+    background-color: var(--theme-form_color);
 
     .inp {
         position: relative;

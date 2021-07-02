@@ -67,8 +67,20 @@ const btnDisabled = () =>{
     $('#btnmodal').attr( 'disabled' , "disabled");
 }
 
-const toggleButton = document.querySelector('.dark-light');
-   
-   toggleButton.addEventListener('click', () => {
-     document.body.classList.toggle('light-mode');
-   });
+
+$(document).on('click', '.dark-light', function () {
+    $('body').toggleClass('light-mode');
+
+    if(  $('body').hasClass('light-mode')  ){
+		localStorage.setItem('dark-mode', 'true');
+	} else {
+		localStorage.setItem('dark-mode', 'false');
+	}
+});
+
+if(localStorage.getItem('dark-mode') === 'true'){
+	$('body').addClass('light-mode');
+
+} else {
+	$('body').removeClass('light-mode');
+}
