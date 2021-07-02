@@ -7,6 +7,8 @@
     --theme-darkgray: rgba(128 128 128 / 1);
     --theme-barber-img: rgba(0 0 0 / 1);
     --theme-barber-2-img: rgba(42 42 42 / 1);
+    --theme-bg-modal: rgba(0 0 0 / 0.7);
+    --theme-bg-modal-content: rgba(255 255 255 / 0.7);
 }
 
 .light-mode {
@@ -18,5 +20,6 @@
     --theme-form_color: rgba( 182 234 255  / 0.5);
     --theme-barber-img: rgba(128 128 128 / 1);
     --theme-barber-2-img: rgba(128 128 128 / 0.3);
-    
+    --theme-bg-modal: rgba(0 0 0 / 0.7);
+    --theme-bg-modal-content: rgba(255 255 255 / 0.7);
 }

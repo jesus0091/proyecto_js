@@ -41,5 +41,4 @@ const dataClient = () => {
 
     form.reset();
     eraseIcons();
-    // btnDisabled();
 }
